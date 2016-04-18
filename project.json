@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "description": "Vier Gewinnt Console Application",
+  "authors": [ "Florian Albertz" ],
+  "tags": [ "" ],
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "tooling": {
+    "defaultNamespace": "VierGewinnt"
+  },
+
+  "dependencies": {
+  },
+
+  "commands": {
+    "VierGewinnt": "VierGewinnt"
+  },
+
+  "frameworks": {
+    "dnx451": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.1-beta-23516",
+          "System.Collections": "4.0.11-beta-23516"
+        }
+    }
+  }
+}
