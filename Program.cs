@@ -26,7 +26,7 @@ namespace VierGewinnt {
 			Console.Title = "4 Gewinnt";
 
 			/* Instantiate views */
-			ViewElement mainView = new MainView(renderer);
+			ViewElement mainView = new MainView(renderer, board);
 
 			/* Main game loop */
 			while(true) {
@@ -74,6 +74,12 @@ namespace VierGewinnt {
 			}
 		}
 
+		/* Print a message and abort the program */
+		private static void abort(string message) {
+			Console.WriteLine(message);
+			Environment.Exit(1);
+		}
+
 		/* Handle user input */
 		private static void handleKey(ConsoleKey key) {
 			if(!board.status().done) {
@@ -89,6 +95,9 @@ namespace VierGewinnt {
 					break;
 				case ConsoleKey.RightArrow:
 					moveRight();
+					break;
+				case ConsoleKey.Enter:
+					insertCoin();
 					break;
 			}
 		}
@@ -112,9 +121,8 @@ namespace VierGewinnt {
 			}
 		}
 
-		private static void abort(string message) {
-			Console.WriteLine(message);
-			Environment.Exit(1);
+		private static void insertCoin() {
+			board.insert(new Coin(players[turn]), waiting);
 		}
 	}
 }
