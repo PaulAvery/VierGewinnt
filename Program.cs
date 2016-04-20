@@ -16,8 +16,7 @@ namespace VierGewinnt {
 		private static List<Player> players = new List<Player>();
 
 		public static void Main(string[] playerNames) {
-			/* Clear the screen on exit */
-			AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnExit);
+			Console.CancelKeyPress += new ConsoleCancelEventHandler((object o, ConsoleCancelEventArgs e) => exit());
 
 			/* Setup */
 			createUsers(playerNames);
@@ -44,7 +43,7 @@ namespace VierGewinnt {
 		}
 
 		/* Cleanup on exit */
-		private static void OnExit(object sender, EventArgs e) {
+		private static void exit() {
 			Console.Clear();
 		}
 
@@ -76,6 +75,7 @@ namespace VierGewinnt {
 
 		/* Print a message and abort the program */
 		private static void abort(string message) {
+			Console.Clear();
 			Console.WriteLine(message);
 			Environment.Exit(1);
 		}
@@ -123,6 +123,11 @@ namespace VierGewinnt {
 
 		private static void insertCoin() {
 			board.insert(new Coin(players[turn]), waiting);
+
+			turn++;
+			if(turn >= players.Count) {
+				turn = 0;
+			}
 		}
 	}
 }
