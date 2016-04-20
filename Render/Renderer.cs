@@ -1,17 +1,40 @@
 using System;
+using System.Diagnostics;
 
 namespace VierGewinnt.Render {
 	public class Renderer {
+		public long lastFrameTime;
 		private bool initialized = false;
-		private TerminalCharacter[,] frame;
+		private Stopwatch timer = new Stopwatch();
 
-		public void render(Buffer buffer) {
+		public void render(Element element) {
 			init();
+			timer.Restart();
 
-			TerminalCharacter[,] canvas = emptyBuffer();
-			buffer.draw(canvas);
+			Buffer canvas = new Buffer(Console.BufferWidth, Console.BufferHeight);
+			element.draw(canvas);
 
-			/* TODO */
+			for(int y = 0; y < canvas.height; y++) {
+				for(int x = 0; x < canvas.width; x++) {
+					Console.ResetColor();
+					Console.SetCursorPosition(x, y);
+
+					TerminalCharacter character = canvas.get(x, y);
+
+					if(character.foreground.HasValue) {
+						Console.ForegroundColor = character.foreground.Value;
+					}
+
+					if(character.background.HasValue) {
+						Console.BackgroundColor = character.background.Value;
+					}
+
+					Console.Write(character.value);
+				}
+			}
+
+			timer.Stop();
+			this.lastFrameTime = timer.ElapsedMilliseconds;
 		}
 
 		private void init() {
@@ -20,20 +43,7 @@ namespace VierGewinnt.Render {
 			}
 
 			Console.Clear();
-			this.frame = emptyBuffer();
 			this.initialized = true;
-		}
-
-		private TerminalCharacter[,] emptyBuffer() {
-			TerminalCharacter[,] buffer = new TerminalCharacter[Console.BufferWidth, Console.BufferHeight];
-
-			for(int x = 0; x < Console.BufferWidth; x++) {
-				for(int y = 0; y < Console.BufferHeight; y++) {
-					buffer[x, y] = new TerminalCharacter(' ');
-				}
-			}
-
-			return buffer;
 		}
 	}
 }

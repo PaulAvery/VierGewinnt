@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using VierGewinnt.Render;
+using VierGewinnt.Views;
 
 namespace VierGewinnt {
 	public class Program {
@@ -11,38 +12,27 @@ namespace VierGewinnt {
 		private static List<Player> players = new List<Player>();
 
 		public static void Main(string[] playerNames) {
-			createUsers(playerNames);
+			AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnExit);
 
-			ViewBuffer mainView = new ViewBuffer(renderer, new GridBuffer(6, 7));
+			createUsers(playerNames);
+			Console.CursorVisible = false;
+			Console.Title = "4 Gewinnt";
+
+			ViewElement mainView = new MainView(renderer);
 
 			while(true) {
 				mainView.render();
+
+				Console.ResetColor();
+				Console.SetCursorPosition(0, 0);
+				Console.Write(renderer.lastFrameTime.ToString());
+;
 				handleKey(Console.ReadKey().Key);
 			}
 		}
 
-		private static void abort(string message) {
-			Console.WriteLine(message);
-			Environment.Exit(1);
-		}
-
-		private static void createUsers(string[] playerNames) {
-			if(playerNames.Length < 2) {
-				abort("Needs at least two player names as arguments");
-				return;
-			}
-
-			Stack<ConsoleColor> colors = new Stack<ConsoleColor>((ConsoleColor[]) Enum.GetValues(typeof(ConsoleColor)));
-
-			foreach(string playerName in playerNames) {
-				ConsoleColor color = colors.Pop();
-
-				if(color == ConsoleColor.Black) {
-					color = colors.Pop();
-				}
-
-				players.Add(new Player(color, playerName));
-			}
+		private static void OnExit(object sender, EventArgs e) {
+			Console.Clear();
 		}
 
 		private static void handleKey(ConsoleKey key) {
@@ -78,75 +68,31 @@ namespace VierGewinnt {
 			}
 		}
 
-		private static void render() {
-			int width = Console.BufferWidth;
-			int height = Console.BufferHeight;
-
-			int offsetX = (width - (board.width * 4) + 1) / 2;
-			int offsetY = (height - (board.height * 2) + 1) / 2;
-
-			Console.Clear();
-			Console.ResetColor();
-
-			printWaiting(offsetX, offsetY);
-			printBoard(offsetX, offsetY + 1);
-
-			Console.SetCursorPosition(width - 1, height - 1);
+		private static void abort(string message) {
+			Console.WriteLine(message);
+			Environment.Exit(1);
 		}
 
-		private static void printWaiting(int offsetX, int offsetY) {
-			Console.SetCursorPosition(offsetX + (waiting * 4) + 2, offsetY);
-			Console.ForegroundColor = players[turn].color;
-			Console.Write("●");
-		}
-
-		private static void printBoard(int offsetX, int offsetY) {
-			for(int x = 0; x < board.width * 4; x+=4) {
-				for(int y = (board.height - 1) * 2; y >= 0; y-=2) {
-					Coin? coin = board.getPosition(x/4, y/2);
-
-					Console.SetCursorPosition(offsetX + x, offsetY + y);
-					Console.Write("┼───┼");
-
-					Console.SetCursorPosition(offsetX + x, offsetY + y + 1);
-					Console.Write("│ ");
-
-					if(coin.HasValue) {
-						Console.ForegroundColor = coin.Value.won ? ConsoleColor.Black : coin.Value.player.color;
-						Console.Write("●");
-						Console.ResetColor();
-					} else {
-						Console.Write(" ");
-					}
-
-					Console.Write(" │");
-				}
-
-				Console.SetCursorPosition(offsetX + x, offsetY + board.height * 2);
-				Console.Write("┴───┴");
-
-				Console.SetCursorPosition(offsetX + x, offsetY);
-				Console.Write("┬───┬");
+		private static void createUsers(string[] playerNames) {
+			if(playerNames.Length < 2) {
+				abort("Needs at least two player names as arguments");
+				return;
 			}
 
-			for(int y = board.height * 2; y >= 0; y-=2) {
-				Console.SetCursorPosition(offsetX, offsetY + y);
-				if(y == 0) {
-					Console.Write("┌");
-				} else if(y == board.height * 2) {
-					Console.Write("└");
-				} else {
-					Console.Write("├");
+			Stack<ConsoleColor> colors = new Stack<ConsoleColor>((ConsoleColor[]) Enum.GetValues(typeof(ConsoleColor)));
+
+			foreach(string playerName in playerNames) {
+				ConsoleColor color = colors.Pop();
+
+				if(color == ConsoleColor.Black) {
+					color = colors.Pop();
 				}
 
-				Console.SetCursorPosition(offsetX + board.width * 4, offsetY + y);
-				if(y == 0) {
-					Console.Write("┐");
-				} else if(y == board.height * 2) {
-					Console.Write("┘");
-				} else {
-					Console.Write("┤");
+				if(color == ConsoleColor.White) {
+					color = colors.Pop();
 				}
+
+				players.Add(new Player(color, playerName));
 			}
 		}
 	}
