@@ -16,10 +16,10 @@ namespace VierGewinnt.Views {
 					Coin? coin = board.getPosition(x, y);
 
 					if(!coin.HasValue) {
-						grid.put(x, y, new TerminalCharacter(' '));
+						grid.put(x, board.height - y - 1, new TerminalCharacter(' '));
 					} else {
 						TerminalCharacter character = new TerminalCharacter('o', coin.Value.player.color);
-						grid.put(x, y, character);
+						grid.put(x, board.height - y - 1, character);
 					}
 				}
 			}
