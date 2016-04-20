@@ -1,7 +1,11 @@
 namespace VierGewinnt.Render {
+	/* Element to render a grid of TerminalCharacters with borders */
 	public class GridElement: Element {
+		private int cellWidth = 4;
+		private int cellHeight = 2;
 		private TerminalCharacter[,] entries;
 
+		/* Width and height are the number of cells the grid will possess */
 		public GridElement(int width, int height) {
 			this.entries = new TerminalCharacter[width, height];
 
@@ -12,6 +16,7 @@ namespace VierGewinnt.Render {
 			}
 		}
 
+		/* Set a character into a gridcell */
 		public void put(int x, int y, TerminalCharacter value) {
 			this.entries[x, y] = value;
 		}
@@ -23,9 +28,7 @@ namespace VierGewinnt.Render {
 			int targetWidth = canvas.width;
 			int targetHeight = canvas.height;
 
-			int cellWidth = 4;
-			int cellHeight = 2;
-
+			/* Loop through grid cells and put all borders and values */
 			for(int y = 0; y < height; y++) {
 				for(int x = 0; x < width; x++) {
 					char topLeft = '┼';

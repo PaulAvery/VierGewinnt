@@ -1,4 +1,5 @@
 namespace VierGewinnt.Render {
+	/* Element which centers its child element horizontally and vertically */
 	public class CenterElement: WrapElement {
 		public string text;
 

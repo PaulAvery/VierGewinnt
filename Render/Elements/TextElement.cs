@@ -1,4 +1,5 @@
 namespace VierGewinnt.Render {
+	/* Element to render a block of text */
 	public class TextElement: Element {
 		public string text;
 

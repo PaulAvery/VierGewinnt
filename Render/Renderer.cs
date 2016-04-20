@@ -3,12 +3,12 @@ using System.Diagnostics;
 
 namespace VierGewinnt.Render {
 	public class Renderer {
-		public long lastFrameTime;
-		private bool initialized = false;
+		/* Contains the time of the last call to render() in milliseconds */
+		public long lastFrameTime = 0;
 		private Stopwatch timer = new Stopwatch();
 
+		/* Render an element to the terminal */
 		public void render(Element element) {
-			init();
 			timer.Restart();
 
 			Buffer canvas = new Buffer(Console.BufferWidth, Console.BufferHeight);
@@ -16,6 +16,7 @@ namespace VierGewinnt.Render {
 
 			for(int y = 0; y < canvas.height; y++) {
 				for(int x = 0; x < canvas.width; x++) {
+					/* All of this is probably horribly inefficient atm */
 					Console.ResetColor();
 					Console.SetCursorPosition(x, y);
 
@@ -35,15 +36,6 @@ namespace VierGewinnt.Render {
 
 			timer.Stop();
 			this.lastFrameTime = timer.ElapsedMilliseconds;
-		}
-
-		private void init() {
-			if(this.initialized) {
-				return;
-			}
-
-			Console.Clear();
-			this.initialized = true;
 		}
 	}
 }
