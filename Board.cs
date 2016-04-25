@@ -19,6 +19,8 @@ namespace VierGewinnt {
 		/* Use nullable type so we can have empty cells */
 		private Coin?[,] board;
 		private Status state;
+		private int waiting;
+		public Player player;
 
 		public Board(int width, int height) {
 			this.width = width;
@@ -38,22 +40,36 @@ namespace VierGewinnt {
 			return this.board[x, y];
 		}
 
-		/* Try to insert a coin into a given column */
-		public bool insert(Coin coin, int column) {
-			if(column >= this.width) {
-				throw new Exception("Invalid column specified");
-			} else if(this.state.done) {
-				throw new Exception("Game is already over");
+		/* Select next column */
+		public void selectNext() {
+			if(waiting == 0) {
+				this.waiting = this.width - 1;
+			} else {
+				this.waiting--;
 			}
+		}
+
+		/* Select previous column */
+		public void selectPrevious() {
+			if(this.waiting == this.width - 1) {
+				this.waiting = 0;
+			} else {
+				this.waiting++;
+			}
+		}
+
+		/* Try to insert a coin into the current column*/
+		public bool insert() {
+			Coin coin = new Coin(this.player);
 
 			/* Find lowest empty slot */
 			for(int i = 0; i < this.height; i++) {
-				if(this.board[column, i] == null) {
+				if(this.board[this.waiting, i] == null) {
 					/* Save the coin */
-					this.board[column, i] = coin;
+					this.board[this.waiting, i] = coin;
 
 					/* Check if this resulted in a win for anyone */
-					this.state = this.checkStatus(column, i);
+					this.state = this.checkStatus(this.waiting, i);
 					return true;
 				}
 			}

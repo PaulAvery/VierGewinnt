@@ -19,13 +19,13 @@ namespace VierGewinnt {
 			Console.CancelKeyPress += new ConsoleCancelEventHandler((object o, ConsoleCancelEventArgs e) => exit());
 
 			/* Setup */
-			createUsers(playerNames);
+			createPlayers(playerNames);
 			Console.CursorVisible = false;
 			Console.Clear();
 			Console.Title = "4 Gewinnt";
 
 			/* Instantiate views */
-			ViewElement mainView = new MainView(renderer, board);
+			ViewElement mainView = new MainView(renderer, board, players);
 
 			/* Main game loop */
 			while(true) {
@@ -48,7 +48,7 @@ namespace VierGewinnt {
 		}
 
 		/* Create users and assign colors */
-		private static void createUsers(string[] playerNames) {
+		private static void createPlayers(string[] playerNames) {
 			if(playerNames.Length < 2) {
 				abort("Needs at least two player names as arguments");
 				return;
@@ -71,6 +71,8 @@ namespace VierGewinnt {
 
 				players.Add(new Player(color, playerName));
 			}
+
+			board.player = players[0];
 		}
 
 		/* Print a message and abort the program */
@@ -106,28 +108,22 @@ namespace VierGewinnt {
 		 * Key handlers
 		 **********************************************************************/
 		private static void moveLeft() {
-			if(waiting == 0) {
-				waiting = board.width - 1;
-			} else {
-				waiting--;
-			}
+			board.selectPrevious();
 		}
 
 		private static void moveRight() {
-			if(waiting == board.width - 1) {
-				waiting = 0;
-			} else {
-				waiting++;
-			}
+			board.selectNext();
 		}
 
 		private static void insertCoin() {
-			board.insert(new Coin(players[turn]), waiting);
+			board.insert();
 
 			turn++;
 			if(turn >= players.Count) {
 				turn = 0;
 			}
+
+			board.player = players[turn];
 		}
 	}
 }

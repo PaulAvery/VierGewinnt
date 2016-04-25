@@ -1,9 +1,7 @@
 namespace VierGewinnt.Render {
 	/* Element which centers its child element horizontally and vertically */
 	public class CenterElement: WrapElement {
-		public string text;
-
-		public CenterElement(Element child): base(child) {}
+		public CenterElement(Element child = null): base(child) {}
 
 		public override void draw(Buffer canvas) {
 			Buffer innerBuffer = new Buffer(canvas.width, canvas.height);

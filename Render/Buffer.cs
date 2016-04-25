@@ -41,7 +41,7 @@ namespace VierGewinnt.Render {
 		}
 
 		/* Set a terminal character at given position */
-		public void set(int x, int y, TerminalCharacter character) {
+		public virtual void set(int x, int y, TerminalCharacter character) {
 			if(this.parent != null) {
 				this.parent.set(x + this.offsetX, y + this.offsetY, character);
 			} else if(x >= 0 && x < this.width && y >= 0 && y < this.height) {
@@ -59,7 +59,7 @@ namespace VierGewinnt.Render {
 		 * Get the TerminalCharacter at position. If position is out of bounds
 		 * or was not set before, an empty TerminalCharacter is returned.
 		 */
-		public TerminalCharacter get(int x, int y) {
+		public virtual TerminalCharacter get(int x, int y) {
 			if(this.parent != null) {
 				return this.parent.get(x + this.offsetX, y + this.offsetY);
 			}

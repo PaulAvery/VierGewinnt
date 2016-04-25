@@ -1,13 +1,36 @@
 using VierGewinnt.Render;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace VierGewinnt.Views {
 	public class MainView: ViewElement {
 		private Board board;
 		private GridElement grid = new GridElement(7, 6);
+		private HorizontalSplitElement names;
 
-		public MainView(Renderer renderer, Board board): base(renderer) {
-			setChild(new CenterElement(grid));
+		public MainView(Renderer renderer, Board board, List<Player> players): base(renderer) {
 			this.board = board;
+
+			Element names = new HorizontalSplitElement(
+				players.Select(player => {
+					return new ConditionalWrapElement(
+						() => !board.player.Equals(player),
+						new ColorElement(player.color),
+						new CenterElement(
+							new TextElement(
+								player.name
+							)
+						)
+					);
+				}).ToArray()
+			);
+
+			Element boardGrid = new CenterElement(this.grid);
+
+			setChild(new VerticalFloatElement(new Element[] {
+				new FixedHeightElement(5, names),
+				boardGrid
+			}));
 		}
 
 		public override void draw(Buffer canvas) {
