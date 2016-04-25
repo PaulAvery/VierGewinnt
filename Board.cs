@@ -41,8 +41,8 @@ namespace VierGewinnt {
 		}
 
 		/* Select next column */
-		public void selectNext() {
-			if(waiting == 0) {
+		public void selectPrevious() {
+			if(this.waiting == 0) {
 				this.waiting = this.width - 1;
 			} else {
 				this.waiting--;
@@ -50,7 +50,7 @@ namespace VierGewinnt {
 		}
 
 		/* Select previous column */
-		public void selectPrevious() {
+		public void selectNext() {
 			if(this.waiting == this.width - 1) {
 				this.waiting = 0;
 			} else {
@@ -122,7 +122,7 @@ namespace VierGewinnt {
 					}
 				}
 
-				for(int xPos = x + 1; xPos <= this.width; xPos++) {
+				for(int xPos = x + 1; xPos < this.width; xPos++) {
 					Coin? foundCoin = this.board[xPos, y];
 
 					if(foundCoin.HasValue && foundCoin.Value.player.Equals(player)) {
