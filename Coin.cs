@@ -1,5 +1,5 @@
 namespace VierGewinnt {
-	public struct Coin {
+	public class Coin {
 		public readonly Player player;
 		public bool won;
 

@@ -36,12 +36,12 @@ namespace VierGewinnt.Views {
 		public override void draw(Buffer canvas) {
 			for(int x = 0; x < board.width; x++) {
 				for(int y = 0; y < board.height; y++) {
-					Coin? coin = board.getPosition(x, y);
+					Coin coin = board.getPosition(x, y);
 
-					if(!coin.HasValue) {
+					if(coin == null) {
 						grid.put(x, board.height - y - 1, new TerminalCharacter(' '));
 					} else {
-						TerminalCharacter character = new TerminalCharacter('●', coin.Value.player.color);
+						TerminalCharacter character = new TerminalCharacter('●', coin.player.color);
 						grid.put(x, board.height - y - 1, character);
 					}
 				}

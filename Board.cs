@@ -1,13 +1,12 @@
-using System;
 using System.Collections.Generic;
 
 namespace VierGewinnt {
 	public class Board {
 		public struct Status {
-			public readonly Player? winner;
+			public readonly Player winner;
 			public readonly bool done;
 
-			public Status(Player? winner, bool done) {
+			public Status(Player winner, bool done) {
 				this.winner = winner;
 				this.done = done;
 			}
@@ -17,7 +16,7 @@ namespace VierGewinnt {
 		public readonly int height;
 
 		/* Use nullable type so we can have empty cells */
-		private Coin?[,] board;
+		private Coin[,] board;
 		private Status state;
 		private int waiting;
 		public Player player;
@@ -26,7 +25,7 @@ namespace VierGewinnt {
 			this.width = width;
 			this.height = height;
 
-			this.board = new Coin?[width, height];
+			this.board = new Coin[width, height];
 			this.state = new Status(null, false);
 		}
 
@@ -36,7 +35,7 @@ namespace VierGewinnt {
 		}
 
 		/* Get coin from single position */
-		public Coin? getPosition(int x, int y) {
+		public Coin getPosition(int x, int y) {
 			return this.board[x, y];
 		}
 
@@ -81,7 +80,7 @@ namespace VierGewinnt {
 		/* Generate a new status based on the given center coin */
 		private Status checkStatus(int x, int y) {
 			if(this.matchedFour(x, y)) {
-				return new Status(this.board[x, y].Value.player, true);
+				return new Status(this.board[x, y].player, true);
 			} else if(this.isFull()) {
 				/* Our board is full, tie */
 				return new Status(null, true);
@@ -104,18 +103,18 @@ namespace VierGewinnt {
 
 		/* Check if 4 are matched through specific cell */
 		private bool matchedFour(int x, int y) {
-			Coin? coin = this.board[x, y];
+			Coin coin = this.board[x, y];
 
-			if(coin.HasValue) {
-				Player player = coin.Value.player;
+			if(coin != null) {
+				Player player = coin.player;
 				List<Coin> coins = new List<Coin>();
 				coins.Add((Coin) coin);
 
 				/* check horizontally */
 				for(int xPos = x - 1; xPos >= 0; xPos--) {
-					Coin? foundCoin = this.board[xPos, y];
+					Coin foundCoin = this.board[xPos, y];
 
-					if(foundCoin.HasValue && foundCoin.Value.player.Equals(player)) {
+					if(foundCoin != null && foundCoin.player.Equals(player)) {
 						coins.Add((Coin) foundCoin);
 					} else {
 						break;
@@ -123,9 +122,9 @@ namespace VierGewinnt {
 				}
 
 				for(int xPos = x + 1; xPos < this.width; xPos++) {
-					Coin? foundCoin = this.board[xPos, y];
+					Coin foundCoin = this.board[xPos, y];
 
-					if(foundCoin.HasValue && foundCoin.Value.player.Equals(player)) {
+					if(foundCoin != null && foundCoin.player.Equals(player)) {
 						coins.Add((Coin) foundCoin);
 					} else {
 						break;

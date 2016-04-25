@@ -1,7 +1,7 @@
 using System;
 
 namespace VierGewinnt {
-	public struct Player {
+	public class Player {
 		public readonly ConsoleColor color;
 		public readonly string name;
 		public bool active;
