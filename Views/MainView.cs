@@ -41,7 +41,7 @@ namespace VierGewinnt.Views {
 					if(!coin.HasValue) {
 						grid.put(x, board.height - y - 1, new TerminalCharacter(' '));
 					} else {
-						TerminalCharacter character = new TerminalCharacter('o', coin.Value.player.color);
+						TerminalCharacter character = new TerminalCharacter('●', coin.Value.player.color);
 						grid.put(x, board.height - y - 1, character);
 					}
 				}
