@@ -1,6 +1,7 @@
-using VierGewinnt.Render;
+using System;
 using System.Linq;
 using System.Collections.Generic;
+using VierGewinnt.Render;
 
 namespace VierGewinnt.Views {
 	public class MainView: ViewElement {
@@ -14,11 +15,13 @@ namespace VierGewinnt.Views {
 			Element names = new HorizontalSplitElement(
 				players.Select(player => {
 					return new ConditionalWrapElement(
-						() => !board.player.Equals(player),
-						new ColorElement(player.color),
-						new CenterElement(
-							new TextElement(
-								player.name
+						() => board.player.Equals(player),
+						new ColorElement(ConsoleColor.White),
+						new ColorElement(player.color,
+							new CenterElement(
+								new TextElement(
+									player.name
+								)
 							)
 						)
 					);
@@ -33,7 +36,7 @@ namespace VierGewinnt.Views {
 			}));
 		}
 
-		public override void draw(Buffer canvas) {
+		public override void draw(Render.Buffer canvas) {
 			for(int x = 0; x < board.width; x++) {
 				for(int y = 0; y < board.height; y++) {
 					Coin coin = board.getPosition(x, y);
@@ -41,7 +44,7 @@ namespace VierGewinnt.Views {
 					if(coin == null) {
 						grid.put(x, board.height - y - 1, new TerminalCharacter(' '));
 					} else {
-						TerminalCharacter character = new TerminalCharacter('●', coin.player.color);
+						TerminalCharacter character = new TerminalCharacter('●', coin.won ? ConsoleColor.White : coin.player.color);
 						grid.put(x, board.height - y - 1, character);
 					}
 				}
