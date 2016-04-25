@@ -116,14 +116,14 @@ namespace VierGewinnt {
 		}
 
 		private static void insertCoin() {
-			board.insert();
+			if(board.insert()) {
+				turn++;
+				if(turn >= players.Count) {
+					turn = 0;
+				}
 
-			turn++;
-			if(turn >= players.Count) {
-				turn = 0;
+				board.player = players[turn];
 			}
-
-			board.player = players[turn];
 		}
 	}
 }
