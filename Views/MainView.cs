@@ -6,11 +6,12 @@ using VierGewinnt.Render;
 namespace VierGewinnt.Views {
 	public class MainView: ViewElement {
 		private Board board;
-		private GridElement grid = new GridElement(7, 6);
+		private GridElement grid;
 		private HorizontalSplitElement names;
 
 		public MainView(Renderer renderer, Board board, List<Player> players): base(renderer) {
 			this.board = board;
+			this.grid = new GridElement(board.width, board.height);
 
 			Element names = new HorizontalSplitElement(
 				players.Select(player => {
