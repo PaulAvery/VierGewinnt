@@ -7,7 +7,7 @@ namespace VierGewinnt.Render {
 
 			for(int i = 0; i < this.children.Length; i++) {
 				if(top < canvas.height) {
-					this.children[i].draw(canvas.view(0, top, canvas.width, canvas.height));
+					this.children[i].draw(canvas.view(0, top, canvas.width, canvas.height - top));
 
 					top = canvas.maxY;
 				}
