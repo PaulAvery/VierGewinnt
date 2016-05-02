@@ -15,11 +15,11 @@ namespace VierGewinnt.Views {
 
 			Element names = new HorizontalSplitElement(
 				players.Select(player => {
-					return new ConditionalWrapElement(
-						() => board.player.Equals(player),
-						new ColorElement(ConsoleColor.White),
-						new ColorElement(player.color,
-							new CenterElement(
+					return new ColorElement(player.color,
+						new CenterElement(
+							new ConditionalWrapElement(
+								() => board.player.Equals(player),
+								new BackgroundColorElement(ConsoleColor.DarkGray),
 								new TextElement(
 									player.name
 								)
