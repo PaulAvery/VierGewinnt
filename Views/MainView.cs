@@ -5,12 +5,25 @@ using VierGewinnt.Render;
 
 namespace VierGewinnt.Views {
 	public class MainView: ViewElement {
-		private Board board;
+		/* Whos turn is it? */
+		private int turn = 0;
+
+		/* What position does the waiting coin have? */
+		private int waiting = 0;
+
+		/* The game board */
+		private Board board = new Board(7, 6);
+
+		/* The list of players */
+		private List<Player> players;
+
 		private GridElement grid;
 		private HorizontalSplitElement names;
 
-		public MainView(Renderer renderer, Board board, List<Player> players): base(renderer) {
-			this.board = board;
+		public MainView(Renderer renderer, List<Player> players): base(renderer) {
+			this.players = players;
+			this.board.player = players[0];
+
 			this.grid = new GridElement(board.width, board.height);
 
 			Element names = new HorizontalSplitElement(
@@ -52,6 +65,66 @@ namespace VierGewinnt.Views {
 			}
 
 			base.draw(canvas);
+		}
+
+		public Board.Status focus() {
+			/* Main game loop */
+			while(true) {
+				/* Render the board */
+				render();
+
+				/* Print frametimings for debug purposes */
+				Console.ResetColor();
+				Console.SetCursorPosition(0, 0);
+				Console.Write(renderer.lastFrameTime.ToString());
+
+				/* Check if somebody won, or the game is over. If so, return */
+				if(board.status().done) {
+					break;
+				}
+
+				/* Wait for user input */
+				handleKey(Console.ReadKey().Key);
+			}
+
+			return board.status();
+		}
+
+		/* Handle user input while game is running */
+		private void handleKey(ConsoleKey key) {
+			switch(key) {
+				case ConsoleKey.LeftArrow:
+					moveLeft();
+					break;
+				case ConsoleKey.RightArrow:
+					moveRight();
+					break;
+				case ConsoleKey.Enter:
+					insertCoin();
+					break;
+			}
+		}
+
+		/**********************************************************************
+		 * Key handlers
+		 **********************************************************************/
+		private void moveLeft() {
+			board.selectPrevious();
+		}
+
+		private void moveRight() {
+			board.selectNext();
+		}
+
+		private void insertCoin() {
+			if(board.insert()) {
+				turn++;
+				if(turn >= players.Count) {
+					turn = 0;
+				}
+
+				board.player = players[turn];
+			}
 		}
 	}
 }
