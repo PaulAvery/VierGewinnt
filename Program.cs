@@ -16,7 +16,7 @@ namespace VierGewinnt {
 		private static List<Player> players = new List<Player>();
 
 		public static void Main(string[] playerNames) {
-			Console.CancelKeyPress += new ConsoleCancelEventHandler((object o, ConsoleCancelEventArgs e) => exit());
+			Console.CancelKeyPress += new ConsoleCancelEventHandler(exit);
 
 			/* Setup */
 			createPlayers(playerNames);
@@ -43,8 +43,9 @@ namespace VierGewinnt {
 		}
 
 		/* Cleanup on exit */
-		private static void exit() {
+		private static void exit(object o, ConsoleCancelEventArgs e) {
 			Console.Clear();
+			Environment.Exit(0);
 		}
 
 		/* Create users and assign colors */
