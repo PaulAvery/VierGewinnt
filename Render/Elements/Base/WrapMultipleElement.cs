@@ -1,19 +1,28 @@
+using System.Collections.Generic;
+
 namespace VierGewinnt.Render {
 	/* Base class to wrap an element in another element */
 	public class WrapMultipleElement: Element {
-		public Element[] children;
+		public List<Element> children = new List<Element>();
 
-		public WrapMultipleElement(Element[] children) {
-			this.children = children;
+		public WrapMultipleElement(Element[] children = null) {
+			if(children == null) {
+				children = new Element[0];
+			}
 
-			for(int i = 0; i < children.Length; i++) {
-				this.children[i].parent = this;
+			foreach(Element element in children) {
+				this.addChild(element);
 			}
 		}
 
+		public void addChild(Element child) {
+			child.parent = this;
+			this.children.Add(child);
+		}
+
 		public override void draw(Buffer canvas) {
-			for(int i = 0; i < this.children.Length; i++) {
-				this.children[i].draw(canvas);
+			foreach(Element child in this.children) {
+				child.draw(canvas);
 			}
 		}
 	}
