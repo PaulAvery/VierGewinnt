@@ -103,52 +103,114 @@ namespace VierGewinnt {
 
 		/* Check if 4 are matched through specific cell */
 		private bool matchedFour(int x, int y) {
-			Coin coin = this.board[x, y];
+			if(this.board[x, y] != null) {
+				List<Coin> coins;
 
-			if(coin != null) {
-				Player player = coin.player;
-				List<Coin> coins = new List<Coin>();
-				coins.Add((Coin) coin);
-
-				/* check horizontally */
-				for(int xPos = x - 1; xPos >= 0; xPos--) {
-					Coin foundCoin = this.board[xPos, y];
-
-					if(foundCoin != null && foundCoin.player.Equals(player)) {
-						coins.Add((Coin) foundCoin);
-					} else {
-						break;
-					}
-				}
-
-				for(int xPos = x + 1; xPos < this.width; xPos++) {
-					Coin foundCoin = this.board[xPos, y];
-
-					if(foundCoin != null && foundCoin.player.Equals(player)) {
-						coins.Add((Coin) foundCoin);
-					} else {
-						break;
-					}
-				}
-
+				coins = matchedFourHorizontal(x, y);
 				if(coins.Count >= 4) {
-					/* Highlight winning coins */
-					for(int i = 0; i < coins.Count; i++) {
-						Coin foundCoin = coins[i];
-						foundCoin.won = true;
-					}
-
+					showWinningCoins(coins);
 					return true;
-				} else {
-					/* Reset our found coins */
-					coins.Clear();
-					coins.Add((Coin) coin);
 				}
 
-				/* TODO */
+				coins = matchedFourVertical(x, y);
+				if(coins.Count >= 4) {
+					showWinningCoins(coins);
+					return true;
+				}
+
+				coins = matchedFourDiagonalBottomToTop(x, y);
+				if(coins.Count >= 4) {
+					showWinningCoins(coins);
+					return true;
+				}
+
+				coins = matchedFourDiagonalTopToBottom(x, y);
+				if(coins.Count >= 4) {
+					showWinningCoins(coins);
+					return true;
+				}
 			}
 
 			return false;
+		}
+
+		/* Mark all given coins as won to highlight them later */
+		private void showWinningCoins(List<Coin> coins) {
+			foreach(Coin coin in coins) {
+				coin.won = true;
+			}
+		}
+
+		/* Check if a horizontal match was found */
+		private List<Coin> matchedFourHorizontal(int x, int y) {
+			Coin coin = this.board[x, y];
+			List<Coin> coins = new List<Coin>();
+
+			coins.Add(coin);
+
+			for(int xPos = x - 1; xPos >= 0; xPos--) {
+				Coin foundCoin = this.board[xPos, y];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add((Coin) foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			for(int xPos = x + 1; xPos < this.width; xPos++) {
+				Coin foundCoin = this.board[xPos, y];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add(foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			return coins;
+		}
+
+		/* Check if a vertical match was found */
+		private List<Coin> matchedFourVertical(int x, int y) {
+			Coin coin = this.board[x, y];
+			List<Coin> coins = new List<Coin>();
+
+			coins.Add(coin);
+
+			for(int yPos = y - 1; yPos >= 0; yPos--) {
+				Coin foundCoin = this.board[x, yPos];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add((Coin) foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			for(int yPos = y + 1; yPos < this.width; yPos++) {
+				Coin foundCoin = this.board[x, yPos];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add(foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			return coins;
+		}
+
+		/* Check if a diagonal match was found from bottom left to top right */
+		private List<Coin> matchedFourDiagonalBottomToTop(int x, int y) {
+			/* ToDo */
+			return new List<Coin>();
+		}
+
+		/* Check if a diagonal match was found from bottom left to top right */
+		private List<Coin> matchedFourDiagonalTopToBottom(int x, int y) {
+			/* ToDo */
+			return new List<Coin>();
 		}
 	}
 }
