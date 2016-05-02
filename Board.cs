@@ -18,7 +18,7 @@ namespace VierGewinnt {
 		/* Use nullable type so we can have empty cells */
 		private Coin[,] board;
 		private Status state;
-		private int waiting;
+		public int waiting;
 		public Player player;
 
 		public Board(int width, int height) {

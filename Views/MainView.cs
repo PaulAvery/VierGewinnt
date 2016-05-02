@@ -8,9 +8,6 @@ namespace VierGewinnt.Views {
 		/* Whos turn is it? */
 		private int turn = 0;
 
-		/* What position does the waiting coin have? */
-		private int waiting = 0;
-
 		/* The game board */
 		private Board board = new Board(7, 6);
 
@@ -18,13 +15,14 @@ namespace VierGewinnt.Views {
 		private List<Player> players;
 
 		private GridElement grid;
-		private HorizontalSplitElement names;
+		private GridElement waitingGrid;
 
 		public MainView(Renderer renderer, List<Player> players): base(renderer) {
 			this.players = players;
 			this.board.player = players[0];
 
 			this.grid = new GridElement(board.width, board.height);
+			this.waitingGrid = new GridElement(board.width, 1);
 
 			Element names = new HorizontalSplitElement(
 				players.Select(player => {
@@ -42,7 +40,10 @@ namespace VierGewinnt.Views {
 				}).ToArray()
 			);
 
-			Element boardGrid = new CenterElement(this.grid);
+			Element boardGrid = new CenterElement(new VerticalFloatElement(new Element[] {
+				this.waitingGrid,
+				this.grid
+			}));
 
 			setChild(new VerticalFloatElement(new Element[] {
 				new FixedHeightElement(5, names),
@@ -52,6 +53,12 @@ namespace VierGewinnt.Views {
 
 		public override void draw(Render.Buffer canvas) {
 			for(int x = 0; x < board.width; x++) {
+				if(board.waiting == x) {
+					waitingGrid.put(x, 0, new TerminalCharacter('●', players[turn].color));
+				} else {
+					waitingGrid.put(x, 0, new TerminalCharacter(' '));
+				}
+
 				for(int y = 0; y < board.height; y++) {
 					Coin coin = board.getPosition(x, y);
 

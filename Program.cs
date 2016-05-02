@@ -22,6 +22,10 @@ namespace VierGewinnt {
 
 			/* Focus main view */
 			mainView.focus();
+
+			/* Wait for input before exiting */
+			Console.ReadKey();
+			Console.Clear();
 		}
 
 		/* Cleanup on exit */
