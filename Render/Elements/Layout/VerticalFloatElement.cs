@@ -7,7 +7,7 @@ namespace VierGewinnt.Render {
 
 			foreach(Element child in this.children) {
 				if(top < canvas.height) {
-					child.draw(canvas.view(0, top, canvas.width, canvas.height - top));
+					child.draw(canvas.view(0, top + 1, canvas.width, canvas.height - top - 1));
 
 					top = canvas.maxY;
 				}
