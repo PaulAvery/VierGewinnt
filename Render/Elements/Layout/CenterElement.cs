@@ -10,6 +10,10 @@ namespace VierGewinnt.Render {
 			int offsetX = (canvas.width - (innerBuffer.maxX - innerBuffer.minX)) / 2;
 			int offsetY = (canvas.height - (innerBuffer.maxY - innerBuffer.minY)) / 2;
 
+			/*
+			 * We need to copy because we cannot know the size of
+			 * the child ahead of time.
+			 */
 			canvas.copy(innerBuffer, offsetX, offsetY);
 		}
 	}

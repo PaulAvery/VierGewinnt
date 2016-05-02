@@ -1,9 +1,13 @@
 using System.Collections.Generic;
 
 namespace VierGewinnt {
+	/* Class to represent the game board. Contains most game logic */
 	public class Board {
+		/* Utility Struct to represent game state */
 		public struct Status {
+			/* Winner or null if not done yet/tied */
 			public readonly Player winner;
+			/* Is the game over (somebody won or no spaces left) */
 			public readonly bool done;
 
 			public Status(Player winner, bool done) {
@@ -12,14 +16,19 @@ namespace VierGewinnt {
 			}
 		}
 
+		/* Height and with of the board in fields */
 		public readonly int width;
 		public readonly int height;
 
-		/* Use nullable type so we can have empty cells */
+		/* Position of the waiting coin */
+		public int waiting;
+
+		/* Currently active player */
+		public Player player;
+
+		/* Internal representation of the board and game state */
 		private Coin[,] board;
 		private Status state;
-		public int waiting;
-		public Player player;
 
 		public Board(int width, int height) {
 			this.width = width;

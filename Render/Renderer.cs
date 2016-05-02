@@ -2,6 +2,9 @@ using System;
 using System.Diagnostics;
 
 namespace VierGewinnt.Render {
+	/*
+	 * A class to render a given Element instance to the console
+	 */
 	public class Renderer {
 		/* Contains the time of the last call to render() in milliseconds */
 		public long lastFrameTime = 0;

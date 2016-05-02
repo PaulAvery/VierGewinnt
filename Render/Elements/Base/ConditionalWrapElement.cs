@@ -1,6 +1,9 @@
 using System;
 
 namespace VierGewinnt.Render {
+	/*
+	 * An element to conditionally wrap a child element in a WrapElement
+	 */
 	public class ConditionalWrapElement: WrapElement {
 		private Func<bool> condition;
 		private WrapElement wrappedChild;

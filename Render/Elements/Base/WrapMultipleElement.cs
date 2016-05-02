@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 namespace VierGewinnt.Render {
-	/* Base class to wrap an element in another element */
+	/* Base class to wrap multiple elements in another element */
 	public class WrapMultipleElement: Element {
 		public List<Element> children = new List<Element>();
 

@@ -1,4 +1,5 @@
 namespace VierGewinnt.Render {
+	/* Limited the height of an element */
 	public class FixedHeightElement: WrapElement {
 		private int height;
 

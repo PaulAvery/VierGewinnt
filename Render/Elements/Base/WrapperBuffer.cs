@@ -1,4 +1,8 @@
 namespace VierGewinnt.Render {
+	/*
+	 * Base class to wrap a buffer inside of another buffer.
+	 * Useful to add properties to set TerminalCharacters etc.
+	 */
 	public class WrapBuffer: Buffer {
 		protected Buffer child;
 

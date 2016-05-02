@@ -5,10 +5,14 @@ using VierGewinnt.Views;
 
 namespace VierGewinnt {
 	public class Program {
+		/* The renderer which will draw our UI */
 		private static Renderer renderer = new Renderer();
+
+		/* The list of players */
 		private static List<Player> players = new List<Player>();
 
 		public static void Main(string[] playerNames) {
+			/* Handle Ctrl-C and exit gracefully */
 			Console.CancelKeyPress += new ConsoleCancelEventHandler(exit);
 
 			/* Setup */
@@ -20,7 +24,7 @@ namespace VierGewinnt {
 			/* Instantiate views */
 			MainView mainView = new MainView(renderer, players);
 
-			/* Focus main view */
+			/* Pass focus to main view */
 			mainView.focus();
 
 			/* Wait for input before exiting */
