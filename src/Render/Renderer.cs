@@ -10,6 +10,27 @@ namespace VierGewinnt.Render {
 		public long lastFrameTime = 0;
 		private Stopwatch timer = new Stopwatch();
 
+		/* The window title */
+		private String title;
+
+		public Renderer(String title) {
+			this.title = title;
+		}
+
+		/* Prepare console */
+		public void init() {
+			Console.CursorVisible = false;
+			Console.Clear();
+			Console.Title = this.title;
+		}
+
+		/* Reset console */
+		public void destroy() {
+			Console.CursorVisible = true;
+			Console.ResetColor();
+			Console.Clear();
+		}
+
 		/* Render an element to the terminal */
 		public void render(Element element) {
 			timer.Restart();

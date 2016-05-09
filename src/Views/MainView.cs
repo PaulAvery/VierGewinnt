@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using System.Collections.Generic;
 using VierGewinnt.Render;
 
 namespace VierGewinnt.Views {
@@ -12,16 +11,16 @@ namespace VierGewinnt.Views {
 		/* The game board */
 		private Board board = new Board(7, 6);
 
-		/* The list of players */
-		private List<Player> players;
+		/* The game object */
+		private Game game;
 
 		/* The elements we have to modify in .draw() */
 		private GridElement grid;
 		private GridElement waitingGrid;
 
-		public MainView(Renderer renderer, List<Player> players): base(renderer) {
-			this.players = players;
-			this.board.player = players[0];
+		public MainView(Renderer renderer, Game game): base(renderer) {
+			this.game = game;
+			this.board.player = game.players[0];
 
 			/* Create main elements with correct sizes */
 			this.grid = new GridElement(board.width, board.height);
@@ -29,7 +28,7 @@ namespace VierGewinnt.Views {
 
 			/* Create element to display names */
 			Element names = new HorizontalSplitElement(
-				players.Select(player => {
+				game.players.Select(player => {
 					return new ColorElement(player.color,
 						new CenterElement(
 							new ConditionalWrapElement(
@@ -61,7 +60,7 @@ namespace VierGewinnt.Views {
 			for(int x = 0; x < board.width; x++) {
 				/* Draw waiting coin */
 				if(board.waiting == x) {
-					waitingGrid.put(x, 0, new TerminalCharacter('●', players[turn].color));
+					waitingGrid.put(x, 0, new TerminalCharacter('●', game.players[turn].color));
 				} else {
 					waitingGrid.put(x, 0, new TerminalCharacter(' '));
 				}
@@ -135,11 +134,11 @@ namespace VierGewinnt.Views {
 		private void insertCoin() {
 			if(board.insert()) {
 				turn++;
-				if(turn >= players.Count) {
+				if(turn >= game.players.Count) {
 					turn = 0;
 				}
 
-				board.player = players[turn];
+				board.player = game.players[turn];
 			}
 		}
 	}
