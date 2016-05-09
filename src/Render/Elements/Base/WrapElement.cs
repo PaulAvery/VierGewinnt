@@ -1,6 +1,7 @@
 namespace VierGewinnt.Render {
-	/* Base class to wrap an element in another element */
+	/** Base class to wrap an element in another element */
 	public class WrapElement: Element {
+		/** The child element */
 		public Element child;
 
 		public WrapElement(Element child = null) {
@@ -9,6 +10,10 @@ namespace VierGewinnt.Render {
 			}
 		}
 
+		/**
+		 * Sets the child element.
+		 * Properly assigns its parent
+		 */
 		public void setChild(Element child) {
 			if(this.child != null) {
 				this.child.parent = null;
@@ -18,6 +23,7 @@ namespace VierGewinnt.Render {
 			child.parent = this;
 		}
 
+		/** Call the childs draw() by default */
 		public override void draw(Buffer canvas) {
 			child.draw(canvas);
 		}

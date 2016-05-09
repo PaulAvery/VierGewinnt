@@ -1,12 +1,17 @@
 namespace VierGewinnt.Render {
-	/* Element to render a block of text */
+	/** Element to render a block of text */
 	public class TextElement: Element {
+		/** The text to print */
 		public string text;
 
 		public TextElement(string text = "") {
 			this.text = text;
 		}
 
+		/**
+		 * Draw text.
+		 * Breaks primitively at end of buffer
+		 */
 		public override void draw(Buffer canvas) {
 			int position = 0;
 

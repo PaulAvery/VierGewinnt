@@ -2,36 +2,40 @@ using System;
 using System.Diagnostics;
 
 namespace VierGewinnt.Render {
-	/*
+	/**
 	 * A class to render a given Element instance to the console
 	 */
 	public class Renderer {
-		/* Contains the time of the last call to render() in milliseconds */
+		/** Duration of the last call to render() in milliseconds */
 		public long lastFrameTime = 0;
+		/** Stopwatch to measure render time */
 		private Stopwatch timer = new Stopwatch();
 
-		/* The window title */
+		/** The window title */
 		private String title;
 
 		public Renderer(String title) {
 			this.title = title;
 		}
 
-		/* Prepare console */
+		/** Prepare console */
 		public void init() {
 			Console.CursorVisible = false;
 			Console.Clear();
 			Console.Title = this.title;
 		}
 
-		/* Reset console */
+		/** Reset console */
 		public void destroy() {
 			Console.CursorVisible = true;
 			Console.ResetColor();
 			Console.Clear();
 		}
 
-		/* Render an element to the terminal */
+		/**
+		 * Render an element to the terminal
+		 * @todo This is horribly inefficient atm
+		 */
 		public void render(Element element) {
 			timer.Restart();
 
@@ -40,7 +44,6 @@ namespace VierGewinnt.Render {
 
 			for(int y = 0; y < canvas.height; y++) {
 				for(int x = 0; x < canvas.width; x++) {
-					/* All of this is probably horribly inefficient atm */
 					Console.ResetColor();
 					Console.SetCursorPosition(x, y);
 

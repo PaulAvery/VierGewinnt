@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 
 namespace VierGewinnt.Render {
-	/* Base class to wrap multiple elements in another element */
+	/** Base class to wrap multiple elements in another element */
 	public class WrapMultipleElement: Element {
+		/** The list of children */
 		public List<Element> children = new List<Element>();
 
 		public WrapMultipleElement(Element[] children = null) {
@@ -15,11 +16,13 @@ namespace VierGewinnt.Render {
 			}
 		}
 
+		/** Add a child */
 		public void addChild(Element child) {
 			child.parent = this;
 			this.children.Add(child);
 		}
 
+		/** Draw all children on top of each other */
 		public override void draw(Buffer canvas) {
 			foreach(Element child in this.children) {
 				child.draw(canvas);

@@ -1,33 +1,43 @@
 using System;
 
 namespace VierGewinnt.Render {
-	/*
+	/**
 	 * A class to represent a rectangular grid of TerminalCharacters
 	 */
 	public class Buffer {
-		/* Minimal and maximal occupied positions (bounding rectangle for set chars) */
+		/** Lowest occupied x position */
 		public int minX = 0;
+		/** Highest occupied x position */
 		public int maxX = 0;
+		/** Lowest occupied y position */
 		public int minY = 0;
+		/** Highest occupied y position */
 		public int maxY = 0;
 
-		/* Width and height of buffer */
+		/** Width of buffer */
 		public readonly int width;
+		/** Height of buffer */
 		public readonly int height;
 
+		/** X offset inside parent buffer */
 		private int offsetX;
+		/** Y offset inside parent buffer */
 		private int offsetY;
+		/**
+		 * Parent buffer.
+		 * Writes will pass through if possible
+		 */
 		private Buffer parent;
+		/** Internal representation of the characters */
 		private TerminalCharacter[,] characters;
 
-		/*
-		 * Store if the given character was set before. Otherwise we would need
-		 * to use nullable TerminalCharacters which prevents us from changing
-		 * parts of them elsewhere.
+		/**
+		 * Store if a character was set before.
+		 * Otherwise we would need to use nullable TerminalCharacters,
+		 * which prevents us from changing parts of them elsewhere.
 		 */
 		private bool[,] isSet;
 
-		/* If a parent is supplied, reads and writes will be passed through to the parent buffer at given offsets */
 		public Buffer(int width, int height, Buffer parent = null, int offsetX = 0, int offsetY = 0) {
 			this.width = width;
 			this.height = height;
@@ -40,7 +50,10 @@ namespace VierGewinnt.Render {
 			this.minY = this.height - 1;
 		}
 
-		/* Set a terminal character at given position */
+		/**
+		 * Set a terminal character at given position
+		 * Writes will pass through to the parent if one is available
+		 */
 		public virtual void set(int x, int y, TerminalCharacter character) {
 			if(this.parent != null) {
 				this.parent.set(x + this.offsetX, y + this.offsetY, character);
@@ -55,9 +68,10 @@ namespace VierGewinnt.Render {
 			}
 		}
 
-		/*
-		 * Get the TerminalCharacter at position. If position is out of bounds
-		 * or was not set before, an empty TerminalCharacter is returned.
+		/**
+		 * Get the TerminalCharacter at given position.
+		 * If position is out of bounds or was not set before,
+		 * an empty TerminalCharacter is returned.
 		 */
 		public virtual TerminalCharacter get(int x, int y) {
 			if(this.parent != null) {
@@ -76,12 +90,12 @@ namespace VierGewinnt.Render {
 			}
 		}
 
-		/* Create a transparent view into the buffer */
+		/** Create a transparent view into the buffer */
 		public Buffer view(int x, int y, int width, int height) {
 			return new Buffer(width, height, this, x, y);
 		}
 
-		/* Copy another buffer into this buffer at a given offset */
+		/** Copy another buffer into this buffer at a given offset */
 		public void copy(Buffer buffer, int offsetX = 0, int offsetY = 0) {
 			for(int x = 0; x < buffer.width; x++) {
 				for(int y = 0; y < buffer.height; y++) {
