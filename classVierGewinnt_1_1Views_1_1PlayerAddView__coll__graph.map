@@ -1,2 +1,9 @@
 <map id="VierGewinnt.Views.PlayerAddView" name="VierGewinnt.Views.PlayerAddView">
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1ViewElement.html" title="Base element for a view. " alt="" coords="235,522,353,614"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="416,323,537,430"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="349,160,428,252"/>
+<area shape="rect" id="node8" href="$classVierGewinnt_1_1Render_1_1WrapMultipleElement.html" title="Base class to wrap multiple elements in another element. " alt="" coords="5,323,172,430"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="341,5,532,97"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Render_1_1Renderer.html" title="A class to render a given Element instance to the console. " alt="" coords="196,301,392,452"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Render_1_1VerticalFloatElement.html" title="{VierGewinnt.Render.Vertical\lFloatElement\n||+ VerticalFloatElement()\l+ draw()\l}" alt="" coords="17,515,203,621"/>
 </map>

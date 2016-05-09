@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mainview',['MainView',['../classVierGewinnt_1_1Views_1_1MainView.html',1,'VierGewinnt::Views']]]
+  ['game',['Game',['../classVierGewinnt_1_1Game.html',1,'VierGewinnt']]],
+  ['gridelement',['GridElement',['../classVierGewinnt_1_1Render_1_1GridElement.html',1,'VierGewinnt::Render']]]
 ];

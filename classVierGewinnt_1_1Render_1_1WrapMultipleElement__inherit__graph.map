@@ -1,0 +1,5 @@
+<map id="VierGewinnt.Render.WrapMultipleElement" name="VierGewinnt.Render.WrapMultipleElement">
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1HorizontalSplitElement.html" title="{VierGewinnt.Render.Horizontal\lSplitElement\n||+ HorizontalSplitElement()\l+ draw()\l}" alt="" coords="5,315,208,421"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1VerticalFloatElement.html" title="{VierGewinnt.Render.Vertical\lFloatElement\n||+ VerticalFloatElement()\l+ draw()\l}" alt="" coords="232,315,419,421"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="177,5,255,97"/>
+</map>

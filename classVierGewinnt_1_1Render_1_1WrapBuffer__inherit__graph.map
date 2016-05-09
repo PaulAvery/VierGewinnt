@@ -1,0 +1,6 @@
+<map id="VierGewinnt.Render.WrapBuffer" name="VierGewinnt.Render.WrapBuffer">
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1BackgroundColorBuffer.html" title="{VierGewinnt.Render.Background\lColorBuffer\n|&#45; color\l|+ BackgroundColorBuffer()\l+ set()\l}" alt="" coords="5,491,217,597"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1ColorBuffer.html" title="{VierGewinnt.Render.Color\lBuffer\n|&#45; color\l|+ ColorBuffer()\l+ set()\l}" alt="" coords="241,491,416,597"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Render_1_1UnderlineBuffer.html" title="{VierGewinnt.Render.Underline\lBuffer\n||+ UnderlineBuffer()\l+ set()\l}" alt="" coords="440,491,639,597"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="283,5,374,288"/>
+</map>

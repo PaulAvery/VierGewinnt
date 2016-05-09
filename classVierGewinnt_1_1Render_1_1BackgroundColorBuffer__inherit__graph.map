@@ -1,0 +1,4 @@
+<map id="VierGewinnt.Render.BackgroundColorBuffer" name="VierGewinnt.Render.BackgroundColorBuffer">
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1WrapBuffer.html" title="Base class to wrap a buffer inside of another buffer. " alt="" coords="57,336,165,443"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="66,5,157,288"/>
+</map>

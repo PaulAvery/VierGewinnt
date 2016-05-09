@@ -1,3 +1,7 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node1" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="5,78,184,105"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1WrapBuffer.html" title="Base class to wrap a buffer inside of another buffer. " alt="" coords="232,78,441,105"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1BackgroundColorBuffer.html" title="VierGewinnt.Render.Background\lColorBuffer" alt="" coords="489,5,701,47"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1ColorBuffer.html" title="VierGewinnt.Render.Color\lBuffer" alt="" coords="508,71,683,112"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Render_1_1UnderlineBuffer.html" title="VierGewinnt.Render.Underline\lBuffer" alt="" coords="496,136,695,177"/>
 </map>

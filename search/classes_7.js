@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['status',['Status',['../structVierGewinnt_1_1Board_1_1Status.html',1,'VierGewinnt::Board']]]
+  ['player',['Player',['../classVierGewinnt_1_1Player.html',1,'VierGewinnt']]],
+  ['playeraddview',['PlayerAddView',['../classVierGewinnt_1_1Views_1_1PlayerAddView.html',1,'VierGewinnt::Views']]],
+  ['program',['Program',['../classVierGewinnt_1_1Program.html',1,'VierGewinnt']]]
 ];

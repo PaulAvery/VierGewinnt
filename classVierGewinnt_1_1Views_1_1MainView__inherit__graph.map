@@ -1,2 +1,5 @@
 <map id="VierGewinnt.Views.MainView" name="VierGewinnt.Views.MainView">
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1ViewElement.html" title="Base element for a view. " alt="" coords="43,300,162,392"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="42,145,163,252"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="63,5,142,97"/>
 </map>

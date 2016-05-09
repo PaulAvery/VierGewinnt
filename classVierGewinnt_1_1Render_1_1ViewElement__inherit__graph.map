@@ -1,0 +1,6 @@
+<map id="VierGewinnt.Render.ViewElement" name="VierGewinnt.Render.ViewElement">
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Views_1_1MainView.html" title="The games main view. " alt="" coords="5,440,200,649"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Views_1_1PlayerAddView.html" title="{VierGewinnt.Views.Player\lAddView\n|&#45; players\l&#45; names\l|+ PlayerAddView()\l+ focus()\l}" alt="" coords="225,484,399,605"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="146,145,267,252"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="167,5,246,97"/>
+</map>

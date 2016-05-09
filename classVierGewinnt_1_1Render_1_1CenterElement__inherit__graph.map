@@ -1,0 +1,4 @@
+<map id="VierGewinnt.Render.CenterElement" name="VierGewinnt.Render.CenterElement">
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="36,145,157,252"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="57,5,136,97"/>
+</map>
