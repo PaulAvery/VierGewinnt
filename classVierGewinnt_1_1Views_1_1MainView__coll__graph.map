@@ -1,0 +1,7 @@
+<map id="VierGewinnt.Views.MainView" name="VierGewinnt.Views.MainView">
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Game.html" title="Represents the game and its internal state. " alt="" coords="131,645,263,767"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="98,300,297,583"/>
+<area shape="rect" id="node5" href="$structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="51,160,224,237"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="167,5,302,97"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="249,160,373,237"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="VierGewinnt.Program" name="VierGewinnt.Program">
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Game.html" title="Represents the game and its internal state. " alt="" coords="86,660,218,781"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="53,300,251,583"/>
+<area shape="rect" id="node4" href="$structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="5,160,179,237"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="122,5,257,97"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="203,160,327,237"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Render_1_1Renderer.html" title="{VierGewinnt.Render.Renderer\n|+ lastFrameTime\l&#45; timer\l&#45; title\l|+ Renderer()\l+ init()\l+ destroy()\l+ render()\l}" alt="" coords="242,645,438,796"/>
+</map>
