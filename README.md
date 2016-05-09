@@ -8,3 +8,4 @@ I decided to take the route of completely overengineering everything (especially
 Pass at least two player names as CLI arguments.
 
 Documentation (including class diagrams) can be created by running `doxygen` inside the project directory.
+Current (or maybe slightly out-of-date docs can be found [here](https://paulavery.github.io/VierGewinnt/))
