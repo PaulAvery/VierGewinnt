@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 
 namespace VierGewinnt {
-	/* Class to represent the game board. Contains most game logic */
+	/** Representation of the game board */
 	public class Board {
-		/* Utility Struct to represent game state */
+		/** Utility Struct to represent game state */
 		public struct Status {
-			/* Winner or null if not done yet/tied */
+			/** Winner or null if not done yet/tied */
 			public readonly Player winner;
-			/* Is the game over (somebody won or no spaces left) */
+			/** Is the game over (somebody won or no spaces left) */
 			public readonly bool done;
 
 			public Status(Player winner, bool done) {
@@ -16,12 +16,14 @@ namespace VierGewinnt {
 			}
 		}
 
-		/* Height and with of the board in fields */
+		/** Width of the board */
 		public readonly int width;
+		/** Height of the board */
 		public readonly int height;
 
-		/* Internal representation of the board and game state */
+		/** Internal representation of the board */
 		private Coin[,] board;
+		/** Internal representation of the games state */
 		private Status state;
 
 		public Board(int width, int height) {
@@ -32,17 +34,20 @@ namespace VierGewinnt {
 			this.state = new Status(null, false);
 		}
 
-		/* Return current Status */
+		/** Return current Status */
 		public Status status() {
 			return this.state;
 		}
 
-		/* Get coin from single position */
+		/** Get coin from single position */
 		public Coin getPosition(int x, int y) {
 			return this.board[x, y];
 		}
 
-		/* Try to insert a coin into the current column*/
+		/**
+		 * Try to insert a coin into a column
+		 * @returns bool True on success, false on full column.
+		 */
 		public bool insert(int Position, Coin coin) {
 			/* Find lowest empty slot */
 			for(int i = 0; i < this.height; i++) {
@@ -60,7 +65,7 @@ namespace VierGewinnt {
 			return false;
 		}
 
-		/* Generate a new status based on the given center coin */
+		/** Generate a new status based on the given center coin */
 		private Status checkStatus(int x, int y) {
 			if(this.matchedFour(x, y)) {
 				return new Status(this.board[x, y].player, true);
@@ -73,7 +78,7 @@ namespace VierGewinnt {
 			}
 		}
 
-		/* Check if the entire board is full */
+		/** Check if the entire board is full */
 		private bool isFull() {
 			for(int x = 0; x < this.width; x++) {
 				if(this.board[x, this.height - 1] == null) {
@@ -84,7 +89,7 @@ namespace VierGewinnt {
 			return true;
 		}
 
-		/* Check if 4 are matched through specific cell */
+		/** Check if 4 are matched through specific cell */
 		private bool matchedFour(int x, int y) {
 			if(this.board[x, y] != null) {
 				List<Coin> coins;
@@ -117,14 +122,14 @@ namespace VierGewinnt {
 			return false;
 		}
 
-		/* Mark all given coins as won to highlight them later */
+		/** Mark all given coins as won to highlight them later */
 		private void showWinningCoins(List<Coin> coins) {
 			foreach(Coin coin in coins) {
 				coin.won = true;
 			}
 		}
 
-		/* Check if a horizontal match was found */
+		/** Check if a horizontal match was found */
 		private List<Coin> matchedFourHorizontal(int x, int y) {
 			Coin coin = this.board[x, y];
 			List<Coin> coins = new List<Coin>();
@@ -154,7 +159,7 @@ namespace VierGewinnt {
 			return coins;
 		}
 
-		/* Check if a vertical match was found */
+		/** Check if a vertical match was found */
 		private List<Coin> matchedFourVertical(int x, int y) {
 			Coin coin = this.board[x, y];
 			List<Coin> coins = new List<Coin>();
@@ -184,13 +189,19 @@ namespace VierGewinnt {
 			return coins;
 		}
 
-		/* Check if a diagonal match was found from bottom left to top right */
+		/**
+		 * Check if a diagonal match was found from bottom left to top right
+		 * @todo
+		 */
 		private List<Coin> matchedFourDiagonalBottomToTop(int x, int y) {
 			/* ToDo */
 			return new List<Coin>();
 		}
 
-		/* Check if a diagonal match was found from bottom left to top right */
+		/**
+		 * Check if a diagonal match was found from bottom left to top right
+		 * @todo
+		 */
 		private List<Coin> matchedFourDiagonalTopToBottom(int x, int y) {
 			/* ToDo */
 			return new List<Coin>();

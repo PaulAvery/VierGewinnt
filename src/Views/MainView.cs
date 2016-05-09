@@ -3,16 +3,26 @@ using System.Linq;
 using VierGewinnt.Render;
 
 namespace VierGewinnt.Views {
-	/* The games main view, rendering the active player as well as the board */
+	/**
+	 * The games main view.
+	 * It renders the active player as well as the board
+	 */
 	public class MainView: ViewElement {
-		/* The game object */
+		/** The game object */
 		private Game game;
 
-		/* Position of the waiting coin */
+		/** Position of the waiting coin */
 		public int waiting;
 
-		/* The elements we have to modify in .draw() */
+		/**
+		 * The grid element
+		 * We save it, because we have to modify in .draw()
+		 */
 		private GridElement grid;
+		/**
+		 * The grid element for the waiting coin
+		 * We save it, because we have to modify in .draw()
+		 */
 		private GridElement waitingGrid;
 
 		public MainView(Renderer renderer, Game game): base(renderer) {
@@ -52,6 +62,7 @@ namespace VierGewinnt.Views {
 			}));
 		}
 
+		/** Override drawing function to set all neccessary data in elements */
 		public override void draw(Render.Buffer canvas) {
 			for(int x = 0; x < game.board.width; x++) {
 				/* Draw waiting coin */
@@ -77,6 +88,10 @@ namespace VierGewinnt.Views {
 			base.draw(canvas);
 		}
 
+		/**
+		 * Focus method to handle keypresses.
+		 * Returns the games state once the game is done
+		 */
 		public Board.Status focus() {
 			/* Main game loop */
 			while(true) {
@@ -101,7 +116,7 @@ namespace VierGewinnt.Views {
 			return game.board.status();
 		}
 
-		/* Handle user input while game is running */
+		/** Handle user input while game is running */
 		private void handleKey(ConsoleKey key) {
 			switch(key) {
 				case ConsoleKey.LeftArrow:
@@ -119,6 +134,7 @@ namespace VierGewinnt.Views {
 		/**********************************************************************
 		 * Key handlers
 		 **********************************************************************/
+		/** Select previous column */
 		private void moveLeft() {
 			if(this.waiting == 0) {
 				this.waiting = this.game.board.width - 1;
@@ -127,6 +143,7 @@ namespace VierGewinnt.Views {
 			}
 		}
 
+		/** Select next column */
 		private void moveRight() {
 			if(this.waiting == this.game.board.width - 1) {
 				this.waiting = 0;
@@ -135,6 +152,7 @@ namespace VierGewinnt.Views {
 			}
 		}
 
+		/** Insert coin into currently selected column */
 		private void insertCoin() {
 			game.insert(this.waiting);
 		}

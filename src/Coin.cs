@@ -1,7 +1,9 @@
 namespace VierGewinnt {
-	/* Simple class to represent a single coin which will be inserted into the board */
+	/** Simple representation of a single coin/chip */
 	public class Coin {
+		/** Player this coin belongs to */
 		public readonly Player player;
+		/** Is this coin part of the winning coinset? */
 		public bool won;
 
 		public Coin(Player player) {

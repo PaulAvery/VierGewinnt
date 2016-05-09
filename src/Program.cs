@@ -4,13 +4,15 @@ using VierGewinnt.Render;
 using VierGewinnt.Views;
 
 namespace VierGewinnt {
+	/** The main application class */
 	public class Program {
-		/* The renderer which will draw our UI */
+		/** The renderer which will draw our UI */
 		private static Renderer renderer = new Renderer("4 Gewinnt");
 
-		/* The game object */
+		/** The game object */
 		private static Game game;
 
+		/** The entry method */
 		public static void Main(string[] playerNames) {
 			/* Handle Ctrl-C and exit gracefully */
 			Console.CancelKeyPress += new ConsoleCancelEventHandler(exit);
@@ -30,20 +32,20 @@ namespace VierGewinnt {
 			renderer.destroy();
 		}
 
-		/* Cleanup on exit */
+		/** Cleanup on exit */
 		private static void exit(object o, ConsoleCancelEventArgs e) {
 			renderer.destroy();
 			Environment.Exit(0);
 		}
 
-		/* Print a message and abort the program */
+		/** Print a message and abort the program */
 		private static void abort(string message) {
 			Console.Clear();
 			Console.WriteLine(message);
 			Environment.Exit(1);
 		}
 
-		/* Create users and assign colors */
+		/** Create users and assign colors */
 		private static List<Player> createPlayers(string[] playerNames) {
 			if(playerNames.Length < 2) {
 				abort("Needs at least two player names as arguments");
