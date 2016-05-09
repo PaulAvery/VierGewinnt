@@ -99,54 +99,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <div class="title">VierGewinnt.Render.Buffer Klassenreferenz</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class to represent a rectangular grid of TerminalCharacters.  
+ <a href="classVierGewinnt_1_1Render_1_1Buffer.html#details">Mehr ...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:a54d0256b811b677b58b0e58ec8790640"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a54d0256b811b677b58b0e58ec8790640">Buffer</a> (int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#adc3d0dd05bf3801ad956a82a8cb63b22">width</a>, int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a7bb62d2af34b751c96238dd4948b957a">height</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html">Buffer</a> <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a2ad23b2f7fdb15200f202f9ff41b1895">parent</a>=null, int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a808a44e37c8935b5daad2259206b5562">offsetX</a>=0, int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a5702bbed217c11e804e8aa2fcb367865">offsetY</a>=0)</td></tr>
 <tr class="separator:a54d0256b811b677b58b0e58ec8790640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca62927251f4a6f13577e37b9629947f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#aca62927251f4a6f13577e37b9629947f">set</a> (int x, int y, <a class="el" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html">TerminalCharacter</a> character)</td></tr>
+<tr class="memdesc:aca62927251f4a6f13577e37b9629947f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a terminal character at given position Writes will pass through to the parent if one is available.  <a href="#aca62927251f4a6f13577e37b9629947f">Mehr ...</a><br /></td></tr>
 <tr class="separator:aca62927251f4a6f13577e37b9629947f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48a6e145b1f9b7c016b2abba68d2d9fe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html">TerminalCharacter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a48a6e145b1f9b7c016b2abba68d2d9fe">get</a> (int x, int y)</td></tr>
+<tr class="memdesc:a48a6e145b1f9b7c016b2abba68d2d9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html" title="A representation of a character to be printed to the terminal. ">TerminalCharacter</a> at given position.  <a href="#a48a6e145b1f9b7c016b2abba68d2d9fe">Mehr ...</a><br /></td></tr>
 <tr class="separator:a48a6e145b1f9b7c016b2abba68d2d9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7b07f12f38349cbbec60f604b586b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a2a7b07f12f38349cbbec60f604b586b5">view</a> (int x, int y, int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#adc3d0dd05bf3801ad956a82a8cb63b22">width</a>, int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a7bb62d2af34b751c96238dd4948b957a">height</a>)</td></tr>
+<tr class="memdesc:a2a7b07f12f38349cbbec60f604b586b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a transparent view into the buffer.  <a href="#a2a7b07f12f38349cbbec60f604b586b5">Mehr ...</a><br /></td></tr>
 <tr class="separator:a2a7b07f12f38349cbbec60f604b586b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12841c9d627e8b07d256660a88bb2a91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a12841c9d627e8b07d256660a88bb2a91">copy</a> (<a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html">Buffer</a> buffer, int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a808a44e37c8935b5daad2259206b5562">offsetX</a>=0, int <a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a5702bbed217c11e804e8aa2fcb367865">offsetY</a>=0)</td></tr>
+<tr class="memdesc:a12841c9d627e8b07d256660a88bb2a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy another buffer into this buffer at a given offset.  <a href="#a12841c9d627e8b07d256660a88bb2a91">Mehr ...</a><br /></td></tr>
 <tr class="separator:a12841c9d627e8b07d256660a88bb2a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Öffentliche Attribute</h2></td></tr>
 <tr class="memitem:a9bd5c830fea3935a42bfcfbf85601ad0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a9bd5c830fea3935a42bfcfbf85601ad0">minX</a> = 0</td></tr>
+<tr class="memdesc:a9bd5c830fea3935a42bfcfbf85601ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowest occupied x position.  <a href="#a9bd5c830fea3935a42bfcfbf85601ad0">Mehr ...</a><br /></td></tr>
 <tr class="separator:a9bd5c830fea3935a42bfcfbf85601ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a750c96161e563211a65095232b57c95c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a750c96161e563211a65095232b57c95c">maxX</a> = 0</td></tr>
+<tr class="memdesc:a750c96161e563211a65095232b57c95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Highest occupied x position.  <a href="#a750c96161e563211a65095232b57c95c">Mehr ...</a><br /></td></tr>
 <tr class="separator:a750c96161e563211a65095232b57c95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeef4e040d8a331484d2e216777357bdc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#aeef4e040d8a331484d2e216777357bdc">minY</a> = 0</td></tr>
+<tr class="memdesc:aeef4e040d8a331484d2e216777357bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowest occupied y position.  <a href="#aeef4e040d8a331484d2e216777357bdc">Mehr ...</a><br /></td></tr>
 <tr class="separator:aeef4e040d8a331484d2e216777357bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2343e57b1ab80c283ea059e0cd95fd48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a2343e57b1ab80c283ea059e0cd95fd48">maxY</a> = 0</td></tr>
+<tr class="memdesc:a2343e57b1ab80c283ea059e0cd95fd48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Highest occupied y position.  <a href="#a2343e57b1ab80c283ea059e0cd95fd48">Mehr ...</a><br /></td></tr>
 <tr class="separator:a2343e57b1ab80c283ea059e0cd95fd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc3d0dd05bf3801ad956a82a8cb63b22"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#adc3d0dd05bf3801ad956a82a8cb63b22">width</a></td></tr>
+<tr class="memdesc:adc3d0dd05bf3801ad956a82a8cb63b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of buffer.  <a href="#adc3d0dd05bf3801ad956a82a8cb63b22">Mehr ...</a><br /></td></tr>
 <tr class="separator:adc3d0dd05bf3801ad956a82a8cb63b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bb62d2af34b751c96238dd4948b957a"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a7bb62d2af34b751c96238dd4948b957a">height</a></td></tr>
+<tr class="memdesc:a7bb62d2af34b751c96238dd4948b957a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of buffer.  <a href="#a7bb62d2af34b751c96238dd4948b957a">Mehr ...</a><br /></td></tr>
 <tr class="separator:a7bb62d2af34b751c96238dd4948b957a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attribute</h2></td></tr>
 <tr class="memitem:a808a44e37c8935b5daad2259206b5562"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a808a44e37c8935b5daad2259206b5562">offsetX</a></td></tr>
+<tr class="memdesc:a808a44e37c8935b5daad2259206b5562"><td class="mdescLeft">&#160;</td><td class="mdescRight">X offset inside parent buffer.  <a href="#a808a44e37c8935b5daad2259206b5562">Mehr ...</a><br /></td></tr>
 <tr class="separator:a808a44e37c8935b5daad2259206b5562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5702bbed217c11e804e8aa2fcb367865"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a5702bbed217c11e804e8aa2fcb367865">offsetY</a></td></tr>
+<tr class="memdesc:a5702bbed217c11e804e8aa2fcb367865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y offset inside parent buffer.  <a href="#a5702bbed217c11e804e8aa2fcb367865">Mehr ...</a><br /></td></tr>
 <tr class="separator:a5702bbed217c11e804e8aa2fcb367865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ad23b2f7fdb15200f202f9ff41b1895"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a2ad23b2f7fdb15200f202f9ff41b1895">parent</a></td></tr>
+<tr class="memdesc:a2ad23b2f7fdb15200f202f9ff41b1895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent buffer.  <a href="#a2ad23b2f7fdb15200f202f9ff41b1895">Mehr ...</a><br /></td></tr>
 <tr class="separator:a2ad23b2f7fdb15200f202f9ff41b1895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dd66124a38d589f9cf9e7981c1357bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html">TerminalCharacter</a>[,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a0dd66124a38d589f9cf9e7981c1357bb">characters</a></td></tr>
+<tr class="memdesc:a0dd66124a38d589f9cf9e7981c1357bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal representation of the characters.  <a href="#a0dd66124a38d589f9cf9e7981c1357bb">Mehr ...</a><br /></td></tr>
 <tr class="separator:a0dd66124a38d589f9cf9e7981c1357bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a987f1f68f7e83acb7e2dcab6dbd19efe"><td class="memItemLeft" align="right" valign="top">bool[,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html#a987f1f68f7e83acb7e2dcab6dbd19efe">isSet</a></td></tr>
+<tr class="memdesc:a987f1f68f7e83acb7e2dcab6dbd19efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store if a character was set before.  <a href="#a987f1f68f7e83acb7e2dcab6dbd19efe">Mehr ...</a><br /></td></tr>
 <tr class="separator:a987f1f68f7e83acb7e2dcab6dbd19efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<div class="dynheader">
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>A class to represent a rectangular grid of TerminalCharacters. </p>
+</div><div class="dynheader">
 Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVierGewinnt_1_1Render_1_1Buffer__coll__graph.png" border="0" usemap="#VierGewinnt_8Render_8Buffer_coll__map" alt="Collaboration graph"/></div>
 <map name="VierGewinnt_8Render_8Buffer_coll__map" id="VierGewinnt_8Render_8Buffer_coll__map">
-<area shape="rect" id="node2" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html" title="{VierGewinnt.Render.Terminal\lCharacter\n|+ value\l+ foreground\l+ background\l+ underline\l|+ TerminalCharacter()\l}" alt="" coords="5,5,199,141"/>
+<area shape="rect" id="node2" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html" title="A representation of a character to be printed to the terminal. " alt="" coords="5,5,199,141"/>
 </map>
 </div>
 <h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
@@ -241,6 +261,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Copy another buffer into this buffer at a given offset. </p>
+
 </div>
 </div>
 <a class="anchor" id="a48a6e145b1f9b7c016b2abba68d2d9fe"></a>
@@ -274,6 +296,9 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the <a class="el" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html" title="A representation of a character to be printed to the terminal. ">TerminalCharacter</a> at given position. </p>
+<p>If position is out of bounds or was not set before, an empty <a class="el" href="structVierGewinnt_1_1Render_1_1TerminalCharacter.html" title="A representation of a character to be printed to the terminal. ">TerminalCharacter</a> is returned. </p>
 
 </div>
 </div>
@@ -314,6 +339,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set a terminal character at given position Writes will pass through to the parent if one is available. </p>
 
 </div>
 </div>
@@ -361,6 +388,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Create a transparent view into the buffer. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Datenelemente</h2>
@@ -382,6 +411,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Internal representation of the characters. </p>
+
 </div>
 </div>
 <a class="anchor" id="a7bb62d2af34b751c96238dd4948b957a"></a>
@@ -393,6 +424,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Height of buffer. </p>
 
 </div>
 </div>
@@ -414,6 +447,9 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Store if a character was set before. </p>
+<p>Otherwise we would need to use nullable TerminalCharacters, which prevents us from changing parts of them elsewhere. </p>
+
 </div>
 </div>
 <a class="anchor" id="a750c96161e563211a65095232b57c95c"></a>
@@ -425,6 +461,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Highest occupied x position. </p>
 
 </div>
 </div>
@@ -438,6 +476,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Highest occupied y position. </p>
+
 </div>
 </div>
 <a class="anchor" id="a9bd5c830fea3935a42bfcfbf85601ad0"></a>
@@ -450,6 +490,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Lowest occupied x position. </p>
+
 </div>
 </div>
 <a class="anchor" id="aeef4e040d8a331484d2e216777357bdc"></a>
@@ -461,6 +503,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Lowest occupied y position. </p>
 
 </div>
 </div>
@@ -482,6 +526,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>X offset inside parent buffer. </p>
+
 </div>
 </div>
 <a class="anchor" id="a5702bbed217c11e804e8aa2fcb367865"></a>
@@ -501,6 +547,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Y offset inside parent buffer. </p>
 
 </div>
 </div>
@@ -522,6 +570,9 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Parent buffer. </p>
+<p>Writes will pass through if possible </p>
+
 </div>
 </div>
 <a class="anchor" id="adc3d0dd05bf3801ad956a82a8cb63b22"></a>
@@ -533,6 +584,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Buffer:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Width of buffer. </p>
 
 </div>
 </div>

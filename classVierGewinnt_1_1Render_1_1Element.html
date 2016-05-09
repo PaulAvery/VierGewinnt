@@ -98,12 +98,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <div class="title">VierGewinnt.Render.Element Klassenreferenz<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A base class to represent an element to render to the terminal.  
+ <a href="classVierGewinnt_1_1Render_1_1Element.html#details">Mehr ...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:acdc55576dcb3c2dc497135c03c5edbb0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html#acdc55576dcb3c2dc497135c03c5edbb0">render</a> ()</td></tr>
+<tr class="memdesc:acdc55576dcb3c2dc497135c03c5edbb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply chain upward by default.  <a href="#acdc55576dcb3c2dc497135c03c5edbb0">Mehr ...</a><br /></td></tr>
 <tr class="separator:acdc55576dcb3c2dc497135c03c5edbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f9ca0302c6df0a9bfbc3aa803ff4eb"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html#a13f9ca0302c6df0a9bfbc3aa803ff4eb">draw</a> (<a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html">Buffer</a> canvas)</td></tr>
+<tr class="memdesc:a13f9ca0302c6df0a9bfbc3aa803ff4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method should be implemented to draw the elements contenst.  <a href="#a13f9ca0302c6df0a9bfbc3aa803ff4eb">Mehr ...</a><br /></td></tr>
 <tr class="separator:a13f9ca0302c6df0a9bfbc3aa803ff4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -111,7 +116,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <tr class="memitem:a2accd6c5b300fac1256789ba7f5e1cb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html#a2accd6c5b300fac1256789ba7f5e1cb8">parent</a></td></tr>
 <tr class="separator:a2accd6c5b300fac1256789ba7f5e1cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<div class="dynheader">
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>A base class to represent an element to render to the terminal. </p>
+</div><div class="dynheader">
 Zusammengehörigkeiten von VierGewinnt.Render.Element:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVierGewinnt_1_1Render_1_1Element__coll__graph.png" border="0" usemap="#VierGewinnt_8Render_8Element_coll__map" alt="Collaboration graph"/></div>
@@ -139,6 +146,9 @@ Zusammengehörigkeiten von VierGewinnt.Render.Element:</div>
 </table>
 </div><div class="memdoc">
 
+<p>This method should be implemented to draw the elements contenst. </p>
+<p>The given buffer should be modified in whatever way the element sees fit. </p>
+
 </div>
 </div>
 <a class="anchor" id="acdc55576dcb3c2dc497135c03c5edbb0"></a>
@@ -161,6 +171,9 @@ Zusammengehörigkeiten von VierGewinnt.Render.Element:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Simply chain upward by default. </p>
+<p>Allows us to only implement proper rendering on root element </p>
 
 </div>
 </div>

@@ -99,31 +99,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <div class="title">VierGewinnt.Render.Renderer Klassenreferenz</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class to render a given <a class="el" href="classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. ">Element</a> instance to the console.  
+ <a href="classVierGewinnt_1_1Render_1_1Renderer.html#details">Mehr ...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:a77553d015f0e77263548a316d5d81ced"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a77553d015f0e77263548a316d5d81ced">Renderer</a> (String <a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a049430f171089ad9aaabfa2db1e27c9e">title</a>)</td></tr>
 <tr class="separator:a77553d015f0e77263548a316d5d81ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35d070a5d7e637cac49668559c1ee22d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a35d070a5d7e637cac49668559c1ee22d">init</a> ()</td></tr>
+<tr class="memdesc:a35d070a5d7e637cac49668559c1ee22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare console.  <a href="#a35d070a5d7e637cac49668559c1ee22d">Mehr ...</a><br /></td></tr>
 <tr class="separator:a35d070a5d7e637cac49668559c1ee22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af22961657ed7ceddbb521186e3c3918f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#af22961657ed7ceddbb521186e3c3918f">destroy</a> ()</td></tr>
+<tr class="memdesc:af22961657ed7ceddbb521186e3c3918f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset console.  <a href="#af22961657ed7ceddbb521186e3c3918f">Mehr ...</a><br /></td></tr>
 <tr class="separator:af22961657ed7ceddbb521186e3c3918f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6067a5376b48f37901ee5f349a96e750"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a6067a5376b48f37901ee5f349a96e750">render</a> (<a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a> element)</td></tr>
+<tr class="memdesc:a6067a5376b48f37901ee5f349a96e750"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceVierGewinnt_1_1Render.html">Render</a> an element to the terminal.  <a href="#a6067a5376b48f37901ee5f349a96e750">Mehr ...</a><br /></td></tr>
 <tr class="separator:a6067a5376b48f37901ee5f349a96e750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Öffentliche Attribute</h2></td></tr>
 <tr class="memitem:acd6bc2670bcc9657db5403f92af3c67b"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#acd6bc2670bcc9657db5403f92af3c67b">lastFrameTime</a> = 0</td></tr>
+<tr class="memdesc:acd6bc2670bcc9657db5403f92af3c67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duration of the last call to <a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a6067a5376b48f37901ee5f349a96e750" title="Render an element to the terminal. ">render()</a> in milliseconds.  <a href="#acd6bc2670bcc9657db5403f92af3c67b">Mehr ...</a><br /></td></tr>
 <tr class="separator:acd6bc2670bcc9657db5403f92af3c67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attribute</h2></td></tr>
 <tr class="memitem:a37bbf5743d5156ec1788bb01a828d6ab"><td class="memItemLeft" align="right" valign="top">Stopwatch&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a37bbf5743d5156ec1788bb01a828d6ab">timer</a> = new Stopwatch()</td></tr>
+<tr class="memdesc:a37bbf5743d5156ec1788bb01a828d6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stopwatch to measure render time.  <a href="#a37bbf5743d5156ec1788bb01a828d6ab">Mehr ...</a><br /></td></tr>
 <tr class="separator:a37bbf5743d5156ec1788bb01a828d6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049430f171089ad9aaabfa2db1e27c9e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a049430f171089ad9aaabfa2db1e27c9e">title</a></td></tr>
+<tr class="memdesc:a049430f171089ad9aaabfa2db1e27c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The window title.  <a href="#a049430f171089ad9aaabfa2db1e27c9e">Mehr ...</a><br /></td></tr>
 <tr class="separator:a049430f171089ad9aaabfa2db1e27c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<div class="dynheader">
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>A class to render a given <a class="el" href="classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. ">Element</a> instance to the console. </p>
+</div><div class="dynheader">
 Zusammengehörigkeiten von VierGewinnt.Render.Renderer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVierGewinnt_1_1Render_1_1Renderer__coll__graph.png" border="0" usemap="#VierGewinnt_8Render_8Renderer_coll__map" alt="Collaboration graph"/></div>
@@ -175,6 +186,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Renderer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Reset console. </p>
+
 </div>
 </div>
 <a class="anchor" id="a35d070a5d7e637cac49668559c1ee22d"></a>
@@ -197,6 +210,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Renderer:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Prepare console. </p>
 
 </div>
 </div>
@@ -222,6 +237,9 @@ Zusammengehörigkeiten von VierGewinnt.Render.Renderer:</div>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="namespaceVierGewinnt_1_1Render.html">Render</a> an element to the terminal. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Noch zu erledigen:</a></b></dt><dd>This is horribly inefficient atm </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Datenelemente</h2>
@@ -234,6 +252,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Renderer:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Duration of the last call to <a class="el" href="classVierGewinnt_1_1Render_1_1Renderer.html#a6067a5376b48f37901ee5f349a96e750" title="Render an element to the terminal. ">render()</a> in milliseconds. </p>
 
 </div>
 </div>
@@ -255,6 +275,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Renderer:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Stopwatch to measure render time. </p>
+
 </div>
 </div>
 <a class="anchor" id="a049430f171089ad9aaabfa2db1e27c9e"></a>
@@ -274,6 +296,8 @@ Zusammengehörigkeiten von VierGewinnt.Render.Renderer:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The window title. </p>
 
 </div>
 </div>
