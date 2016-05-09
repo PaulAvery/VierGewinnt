@@ -6,10 +6,13 @@ namespace VierGewinnt {
 		/* The list of players */
 		public List<Player> players = new List<Player>();
 
-		/* The board */
-		public
+		/* The game board */
+		public Board board = new Board(7, 6);
 
-		Game(List<Player> players) {
+		/* Whos turn is it? */
+		public int turn = 0;
+
+		public Game(List<Player> players) {
 			this.players = players;
 		}
 	}

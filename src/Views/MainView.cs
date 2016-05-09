@@ -5,12 +5,6 @@ using VierGewinnt.Render;
 namespace VierGewinnt.Views {
 	/* The games main view, rendering the active player as well as the board */
 	public class MainView: ViewElement {
-		/* Whos turn is it? */
-		private int turn = 0;
-
-		/* The game board */
-		private Board board = new Board(7, 6);
-
 		/* The game object */
 		private Game game;
 
@@ -20,11 +14,11 @@ namespace VierGewinnt.Views {
 
 		public MainView(Renderer renderer, Game game): base(renderer) {
 			this.game = game;
-			this.board.player = game.players[0];
+			game.board.player = game.players[0];
 
 			/* Create main elements with correct sizes */
-			this.grid = new GridElement(board.width, board.height);
-			this.waitingGrid = new GridElement(board.width, 1);
+			this.grid = new GridElement(game.board.width, game.board.height);
+			this.waitingGrid = new GridElement(game.board.width, 1);
 
 			/* Create element to display names */
 			Element names = new HorizontalSplitElement(
@@ -32,7 +26,7 @@ namespace VierGewinnt.Views {
 					return new ColorElement(player.color,
 						new CenterElement(
 							new ConditionalWrapElement(
-								() => board.player.Equals(player),
+								() => game.board.player.Equals(player),
 								new BackgroundColorElement(ConsoleColor.DarkGray),
 								new TextElement(
 									player.name
@@ -57,23 +51,23 @@ namespace VierGewinnt.Views {
 		}
 
 		public override void draw(Render.Buffer canvas) {
-			for(int x = 0; x < board.width; x++) {
+			for(int x = 0; x < game.board.width; x++) {
 				/* Draw waiting coin */
-				if(board.waiting == x) {
-					waitingGrid.put(x, 0, new TerminalCharacter('●', game.players[turn].color));
+				if(game.board.waiting == x) {
+					waitingGrid.put(x, 0, new TerminalCharacter('●', game.players[game.turn].color));
 				} else {
 					waitingGrid.put(x, 0, new TerminalCharacter(' '));
 				}
 
-				for(int y = 0; y < board.height; y++) {
-					Coin coin = board.getPosition(x, y);
+				for(int y = 0; y < game.board.height; y++) {
+					Coin coin = game.board.getPosition(x, y);
 
 					/* Draw each available coin to the grid */
 					if(coin == null) {
-						grid.put(x, board.height - y - 1, new TerminalCharacter(' '));
+						grid.put(x, game.board.height - y - 1, new TerminalCharacter(' '));
 					} else {
 						TerminalCharacter character = new TerminalCharacter('●', coin.won ? ConsoleColor.White : coin.player.color);
-						grid.put(x, board.height - y - 1, character);
+						grid.put(x, game.board.height - y - 1, character);
 					}
 				}
 			}
@@ -93,7 +87,7 @@ namespace VierGewinnt.Views {
 				Console.Write(renderer.lastFrameTime.ToString());
 
 				/* Check if somebody won, or the game is over. If so, return */
-				if(board.status().done) {
+				if(game.board.status().done) {
 					break;
 				}
 
@@ -102,7 +96,7 @@ namespace VierGewinnt.Views {
 			}
 
 			/* Return status so we can handle the winner in the Main() function */
-			return board.status();
+			return game.board.status();
 		}
 
 		/* Handle user input while game is running */
@@ -124,21 +118,21 @@ namespace VierGewinnt.Views {
 		 * Key handlers
 		 **********************************************************************/
 		private void moveLeft() {
-			board.selectPrevious();
+			game.board.selectPrevious();
 		}
 
 		private void moveRight() {
-			board.selectNext();
+			game.board.selectNext();
 		}
 
 		private void insertCoin() {
-			if(board.insert()) {
-				turn++;
-				if(turn >= game.players.Count) {
-					turn = 0;
+			if(game.board.insert()) {
+				game.turn++;
+				if(game.turn >= game.players.Count) {
+					game.turn = 0;
 				}
 
-				board.player = game.players[turn];
+				game.board.player = game.players[game.turn];
 			}
 		}
 	}
