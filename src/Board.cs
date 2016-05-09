@@ -20,12 +20,6 @@ namespace VierGewinnt {
 		public readonly int width;
 		public readonly int height;
 
-		/* Position of the waiting coin */
-		public int waiting;
-
-		/* Currently active player */
-		public Player player;
-
 		/* Internal representation of the board and game state */
 		private Coin[,] board;
 		private Status state;
@@ -48,36 +42,16 @@ namespace VierGewinnt {
 			return this.board[x, y];
 		}
 
-		/* Select next column */
-		public void selectPrevious() {
-			if(this.waiting == 0) {
-				this.waiting = this.width - 1;
-			} else {
-				this.waiting--;
-			}
-		}
-
-		/* Select previous column */
-		public void selectNext() {
-			if(this.waiting == this.width - 1) {
-				this.waiting = 0;
-			} else {
-				this.waiting++;
-			}
-		}
-
 		/* Try to insert a coin into the current column*/
-		public bool insert() {
-			Coin coin = new Coin(this.player);
-
+		public bool insert(int Position, Coin coin) {
 			/* Find lowest empty slot */
 			for(int i = 0; i < this.height; i++) {
-				if(this.board[this.waiting, i] == null) {
+				if(this.board[Position, i] == null) {
 					/* Save the coin */
-					this.board[this.waiting, i] = coin;
+					this.board[Position, i] = coin;
 
 					/* Check if this resulted in a win for anyone */
-					this.state = this.checkStatus(this.waiting, i);
+					this.state = this.checkStatus(Position, i);
 					return true;
 				}
 			}

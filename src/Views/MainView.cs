@@ -8,13 +8,15 @@ namespace VierGewinnt.Views {
 		/* The game object */
 		private Game game;
 
+		/* Position of the waiting coin */
+		public int waiting;
+
 		/* The elements we have to modify in .draw() */
 		private GridElement grid;
 		private GridElement waitingGrid;
 
 		public MainView(Renderer renderer, Game game): base(renderer) {
 			this.game = game;
-			game.board.player = game.players[0];
 
 			/* Create main elements with correct sizes */
 			this.grid = new GridElement(game.board.width, game.board.height);
@@ -26,7 +28,7 @@ namespace VierGewinnt.Views {
 					return new ColorElement(player.color,
 						new CenterElement(
 							new ConditionalWrapElement(
-								() => game.board.player.Equals(player),
+								() => game.currentPlayer().Equals(player),
 								new BackgroundColorElement(ConsoleColor.DarkGray),
 								new TextElement(
 									player.name
@@ -53,7 +55,7 @@ namespace VierGewinnt.Views {
 		public override void draw(Render.Buffer canvas) {
 			for(int x = 0; x < game.board.width; x++) {
 				/* Draw waiting coin */
-				if(game.board.waiting == x) {
+				if(this.waiting == x) {
 					waitingGrid.put(x, 0, new TerminalCharacter('●', game.players[game.turn].color));
 				} else {
 					waitingGrid.put(x, 0, new TerminalCharacter(' '));
@@ -118,22 +120,23 @@ namespace VierGewinnt.Views {
 		 * Key handlers
 		 **********************************************************************/
 		private void moveLeft() {
-			game.board.selectPrevious();
+			if(this.waiting == 0) {
+				this.waiting = this.game.board.width - 1;
+			} else {
+				this.waiting--;
+			}
 		}
 
 		private void moveRight() {
-			game.board.selectNext();
+			if(this.waiting == this.game.board.width - 1) {
+				this.waiting = 0;
+			} else {
+				this.waiting++;
+			}
 		}
 
 		private void insertCoin() {
-			if(game.board.insert()) {
-				game.turn++;
-				if(game.turn >= game.players.Count) {
-					game.turn = 0;
-				}
-
-				game.board.player = game.players[game.turn];
-			}
+			game.insert(this.waiting);
 		}
 	}
 }

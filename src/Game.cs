@@ -15,5 +15,23 @@ namespace VierGewinnt {
 		public Game(List<Player> players) {
 			this.players = players;
 		}
+
+		/* Get the player whos turn it is */
+		public Player currentPlayer() {
+			return this.players[turn];
+		}
+
+		/* Insert coin of current player into board */
+		public void insert(int position) {
+			bool success = this.board.insert(position, new Coin(currentPlayer()));
+
+			if(success) {
+				if(turn == players.Count - 1) {
+					turn = 0;
+				} else {
+					turn++;
+				}
+			}
+		}
 	}
 }
