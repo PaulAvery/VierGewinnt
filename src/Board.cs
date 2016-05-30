@@ -176,7 +176,7 @@ namespace VierGewinnt {
 				}
 			}
 
-			for(int yPos = y + 1; yPos < this.width; yPos++) {
+			for(int yPos = y + 1; yPos < this.height; yPos++) {
 				Coin foundCoin = this.board[x, yPos];
 
 				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
@@ -194,8 +194,32 @@ namespace VierGewinnt {
 		 * @todo
 		 */
 		private List<Coin> matchedFourDiagonalBottomToTop(int x, int y) {
-			/* ToDo */
-			return new List<Coin>();
+			Coin coin = this.board[x, y];
+			List<Coin> coins = new List<Coin>();
+
+			coins.Add(coin);
+
+			for(int offset = -1; y + offset >= 0 && x + offset >= 0; offset--) {
+				Coin foundCoin = this.board[x + offset, y + offset];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add(foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			for(int offset = 1; y + offset < this.height && x + offset < this.width; offset++) {
+				Coin foundCoin = this.board[x + offset, y + offset];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add(foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			return coins;
 		}
 
 		/**
@@ -203,8 +227,32 @@ namespace VierGewinnt {
 		 * @todo
 		 */
 		private List<Coin> matchedFourDiagonalTopToBottom(int x, int y) {
-			/* ToDo */
-			return new List<Coin>();
+			Coin coin = this.board[x, y];
+			List<Coin> coins = new List<Coin>();
+
+			coins.Add(coin);
+
+			for(int offset = -1; y - offset < this.height && x + offset >= 0; offset--) {
+				Coin foundCoin = this.board[x + offset, y - offset];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add(foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			for(int offset = 1; y - offset >= 0 && x + offset < this.width; offset++) {
+				Coin foundCoin = this.board[x + offset, y - offset];
+
+				if(foundCoin != null && foundCoin.player.Equals(coin.player)) {
+					coins.Add(foundCoin);
+				} else {
+					break;
+				}
+			}
+
+			return coins;
 		}
 	}
 }
