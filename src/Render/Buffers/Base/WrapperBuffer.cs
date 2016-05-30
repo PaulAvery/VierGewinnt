@@ -1,4 +1,4 @@
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Buffers.Base {
 	/**
 	 * Base class to wrap a buffer inside of another buffer.
 	 * Useful to add properties to set TerminalCharacters etc.

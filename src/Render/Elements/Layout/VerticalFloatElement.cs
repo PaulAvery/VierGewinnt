@@ -1,5 +1,7 @@
-namespace VierGewinnt.Render {
-	/*
+using VierGewinnt.Render.Elements.Base;
+
+namespace VierGewinnt.Render.Elements.Layout {
+	/**
 	 * Renders its childrens beneath each other, as tightly spaced as possible
 	 */
 	public class VerticalFloatElement: WrapMultipleElement {

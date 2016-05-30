@@ -1,4 +1,6 @@
-namespace VierGewinnt.Render {
+using VierGewinnt.Render.Elements.Base;
+
+namespace VierGewinnt.Render.Elements.Layout {
 	/* Element which spaces out its childs evenly */
 	public class HorizontalSplitElement: WrapMultipleElement {
 		public HorizontalSplitElement(Element[] children = null): base(children) {}

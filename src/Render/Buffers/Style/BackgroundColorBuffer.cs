@@ -1,6 +1,7 @@
 using System;
+using VierGewinnt.Render.Buffers.Base;
 
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Buffers.Style {
 	public class BackgroundColorBuffer: WrapBuffer {
 		private ConsoleColor color;
 

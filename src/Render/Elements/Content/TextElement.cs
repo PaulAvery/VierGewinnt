@@ -1,4 +1,4 @@
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Elements.Content {
 	/** Element to render a block of text */
 	public class TextElement: Element {
 		/** The text to print */

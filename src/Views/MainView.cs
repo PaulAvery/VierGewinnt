@@ -1,6 +1,11 @@
 using System;
 using System.Linq;
 using VierGewinnt.Render;
+using VierGewinnt.Render.Elements;
+using VierGewinnt.Render.Elements.Base;
+using VierGewinnt.Render.Elements.Content;
+using VierGewinnt.Render.Elements.Layout;
+using VierGewinnt.Render.Elements.Style;
 
 namespace VierGewinnt.Views {
 	/**

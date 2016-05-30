@@ -1,6 +1,8 @@
 using System;
+using VierGewinnt.Render.Elements.Base;
+using VierGewinnt.Render.Buffers.Style;
 
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Elements.Style {
 	public class ColorElement: WrapElement {
 		private ConsoleColor color;
 

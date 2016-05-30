@@ -1,6 +1,6 @@
 using System;
 
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Elements.Base {
 	/**
 	 * An element to conditionally wrap a child element in a WrapElement
 	 */

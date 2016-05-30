@@ -1,4 +1,4 @@
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Elements.Content {
 	/**
 	 * Delegate to allow passing of dynamic TerminalCharacter values
 	 */

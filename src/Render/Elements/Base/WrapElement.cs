@@ -1,4 +1,4 @@
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Elements.Base {
 	/** Base class to wrap an element in another element */
 	public class WrapElement: Element {
 		/** The child element */

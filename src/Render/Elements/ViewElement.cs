@@ -1,4 +1,6 @@
-namespace VierGewinnt.Render {
+using VierGewinnt.Render.Elements.Base;
+
+namespace VierGewinnt.Render.Elements {
 	/**
 	 * Base element for a view.
 	 * Instead of further bubbling up the render()

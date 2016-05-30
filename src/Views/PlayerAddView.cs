@@ -1,5 +1,7 @@
-using VierGewinnt.Render;
 using System.Collections.Generic;
+using VierGewinnt.Render;
+using VierGewinnt.Render.Elements;
+using VierGewinnt.Render.Elements.Layout;
 
 namespace VierGewinnt.Views {
 	public class PlayerAddView: ViewElement {

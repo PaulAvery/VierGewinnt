@@ -1,4 +1,6 @@
-namespace VierGewinnt.Render {
+using VierGewinnt.Render.Elements.Base;
+
+namespace VierGewinnt.Render.Elements.Layout {
 	/* Element which centers its child element horizontally and vertically */
 	public class CenterElement: WrapElement {
 		public CenterElement(Element child = null): base(child) {}

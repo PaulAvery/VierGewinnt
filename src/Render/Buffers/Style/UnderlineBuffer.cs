@@ -1,4 +1,6 @@
-namespace VierGewinnt.Render {
+using VierGewinnt.Render.Buffers.Base;
+
+namespace VierGewinnt.Render.Buffers.Style {
 	public class UnderlineBuffer: WrapBuffer {
 		public UnderlineBuffer(Buffer child, int width, int height, Buffer parent = null, int offsetX = 0, int offsetY = 0): base(child, width, height, parent, offsetX, offsetY) {
 		}

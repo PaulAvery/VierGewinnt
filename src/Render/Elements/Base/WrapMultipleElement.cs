@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace VierGewinnt.Render {
+namespace VierGewinnt.Render.Elements.Base {
 	/** Base class to wrap multiple elements in another element */
 	public class WrapMultipleElement: Element {
 		/** The list of children */
