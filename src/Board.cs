@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using VierGewinnt.Render;
 using VierGewinnt.Render.Elements.Content;
 
 namespace VierGewinnt {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
+
 using VierGewinnt.Render;
-using VierGewinnt.Views;
 
 namespace VierGewinnt {
 	/** The main application class */
@@ -19,13 +19,10 @@ namespace VierGewinnt {
 
 			/* Setup */
 			renderer.init();
-			game = new Game(createPlayers(playerNames));
-
-			/* Instantiate views */
-			MainView mainView = new MainView(renderer, game);
+			game = new Game(renderer, createPlayers(playerNames));
 
 			/* Pass focus to main view */
-			mainView.focus();
+			game.focus();
 
 			/* Wait for input before exiting */
 			Console.ReadKey();
