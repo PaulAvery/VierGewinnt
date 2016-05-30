@@ -1,4 +1,9 @@
 namespace VierGewinnt.Render {
+	/**
+	 * Delegate to allow passing of dynamic TerminalCharacter values
+	 */
+	public delegate TerminalCharacter characterDelegate();
+
 	/** Element to render a grid of TerminalCharacters with borders */
 	public class GridElement: Element {
 		/**
@@ -12,21 +17,21 @@ namespace VierGewinnt.Render {
 		 */
 		private int cellHeight = 2;
 		/** Representation of cells */
-		private TerminalCharacter[,] entries;
+		private characterDelegate[,] entries;
 
 		/* Width and height are the number of cells the grid will possess */
 		public GridElement(int width, int height) {
-			this.entries = new TerminalCharacter[width, height];
+			this.entries = new characterDelegate[width, height];
 
 			for(int x = 0; x < 0; x++) {
 				for(int y = 0; y < 0; y++) {
-					this.entries[x, y] = new TerminalCharacter(' ');
+					this.entries[x, y] = () => new TerminalCharacter(' ');
 				}
 			}
 		}
 
 		/** Set a character into a gridcell */
-		public void put(int x, int y, TerminalCharacter value) {
+		public void put(int x, int y, characterDelegate value) {
 			this.entries[x, y] = value;
 		}
 
@@ -61,7 +66,7 @@ namespace VierGewinnt.Render {
 						canvas.set(x * cellWidth, y * cellHeight + innerY, new TerminalCharacter('│'));
 					}
 
-					canvas.set(x * cellWidth + cellWidth / 2, y * cellHeight + cellHeight / 2, this.entries[x, y]);
+					canvas.set(x * cellWidth + cellWidth / 2, y * cellHeight + cellHeight / 2, this.entries[x, y] != null ? this.entries[x, y]() : new TerminalCharacter(' '));
 				}
 
 				canvas.set(width * cellWidth, y * cellHeight, new TerminalCharacter(y == 0 ? '┐' : '┤'));

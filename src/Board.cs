@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
+using VierGewinnt.Render;
 
 namespace VierGewinnt {
 	/** Representation of the game board */
-	public class Board {
+	public class Board: GridElement{
 		/** Utility Struct to represent game state */
 		public struct Status {
 			/** Winner or null if not done yet/tied */
@@ -26,7 +28,7 @@ namespace VierGewinnt {
 		/** Internal representation of the games state */
 		private Status state;
 
-		public Board(int width, int height) {
+		public Board(int width, int height): base(width, height) {
 			this.width = width;
 			this.height = height;
 
@@ -54,6 +56,7 @@ namespace VierGewinnt {
 				if(this.board[Position, i] == null) {
 					/* Save the coin */
 					this.board[Position, i] = coin;
+					this.put(Position, this.height - i - 1, () => new TerminalCharacter('●', coin.won ? ConsoleColor.White : coin.player.color));
 
 					/* Check if this resulted in a win for anyone */
 					this.state = this.checkStatus(Position, i);

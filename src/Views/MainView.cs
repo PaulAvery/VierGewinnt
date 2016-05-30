@@ -15,11 +15,6 @@ namespace VierGewinnt.Views {
 		public int waiting;
 
 		/**
-		 * The grid element
-		 * We save it, because we have to modify in .draw()
-		 */
-		private GridElement grid;
-		/**
 		 * The grid element for the waiting coin
 		 * We save it, because we have to modify in .draw()
 		 */
@@ -29,7 +24,6 @@ namespace VierGewinnt.Views {
 			this.game = game;
 
 			/* Create main elements with correct sizes */
-			this.grid = new GridElement(game.board.width, game.board.height);
 			this.waitingGrid = new GridElement(game.board.width, 1);
 
 			/* Create element to display names */
@@ -52,7 +46,7 @@ namespace VierGewinnt.Views {
 			/* Center and align board and waiting row */
 			Element boardGrid = new CenterElement(new VerticalFloatElement(new Element[] {
 				this.waitingGrid,
-				this.grid
+				game.board
 			}));
 
 			/* Add all elements to ourselves */
@@ -67,21 +61,9 @@ namespace VierGewinnt.Views {
 			for(int x = 0; x < game.board.width; x++) {
 				/* Draw waiting coin */
 				if(this.waiting == x) {
-					waitingGrid.put(x, 0, new TerminalCharacter('●', game.players[game.turn].color));
+					waitingGrid.put(x, 0, () => new TerminalCharacter('●', game.players[game.turn].color));
 				} else {
-					waitingGrid.put(x, 0, new TerminalCharacter(' '));
-				}
-
-				for(int y = 0; y < game.board.height; y++) {
-					Coin coin = game.board.getPosition(x, y);
-
-					/* Draw each available coin to the grid */
-					if(coin == null) {
-						grid.put(x, game.board.height - y - 1, new TerminalCharacter(' '));
-					} else {
-						TerminalCharacter character = new TerminalCharacter('●', coin.won ? ConsoleColor.White : coin.player.color);
-						grid.put(x, game.board.height - y - 1, character);
-					}
+					waitingGrid.put(x, 0, () => new TerminalCharacter(' '));
 				}
 			}
 
