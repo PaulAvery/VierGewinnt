@@ -1,5 +1,3 @@
-using System;
-
 namespace VierGewinnt.Render.Elements.Content {
 	/** Element to render a grid of TerminalCharacters with borders */
 	public class GridElement: Element {
@@ -14,21 +12,21 @@ namespace VierGewinnt.Render.Elements.Content {
 		 */
 		private int cellHeight = 2;
 		/** Representation of cells */
-		private Func<TerminalCharacter>[,] entries;
+		private Element[,] entries;
 
 		/* Width and height are the number of cells the grid will possess */
 		public GridElement(int width, int height) {
-			this.entries = new Func<TerminalCharacter>[width, height];
+			this.entries = new Element[width, height];
 
 			for(int x = 0; x < 0; x++) {
 				for(int y = 0; y < 0; y++) {
-					this.entries[x, y] = () => new TerminalCharacter(' ');
+					this.entries[x, y] = new TextElement(" ");
 				}
 			}
 		}
 
 		/** Set a character into a gridcell */
-		public void put(int x, int y, Func<TerminalCharacter> value) {
+		public void put(int x, int y, Element value) {
 			this.entries[x, y] = value;
 		}
 
@@ -63,7 +61,9 @@ namespace VierGewinnt.Render.Elements.Content {
 						canvas.set(x * cellWidth, y * cellHeight + innerY, new TerminalCharacter('│'));
 					}
 
-					canvas.set(x * cellWidth + cellWidth / 2, y * cellHeight + cellHeight / 2, this.entries[x, y] != null ? this.entries[x, y]() : new TerminalCharacter(' '));
+					if(this.entries[x, y] != null) {
+						this.entries[x, y].draw(new Buffer(1, 1, canvas, x * cellWidth + cellWidth / 2, y * cellHeight + cellHeight / 2));	
+					}
 				}
 
 				canvas.set(width * cellWidth, y * cellHeight, new TerminalCharacter(y == 0 ? '┐' : '┤'));

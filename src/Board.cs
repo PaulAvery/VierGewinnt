@@ -55,7 +55,7 @@ namespace VierGewinnt {
 				if(this.board[Position, i] == null) {
 					/* Save the coin */
 					this.board[Position, i] = coin;
-					this.put(Position, this.height - i - 1, () => coin.render());
+					this.put(Position, this.height - i - 1, coin);
 
 					/* Check if this resulted in a win for anyone */
 					this.state = this.checkStatus(Position, i);

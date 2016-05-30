@@ -88,9 +88,9 @@ namespace VierGewinnt {
 			for(int x = 0; x < this.board.width; x++) {
 				/* Draw waiting coin */
 				if(this.waiting == x) {
-					waitingGrid.put(x, 0, () => new Coin(this.currentPlayer()).render());
+					waitingGrid.put(x, 0, new Coin(this.currentPlayer()));
 				} else {
-					waitingGrid.put(x, 0, () => new TerminalCharacter(' '));
+					waitingGrid.put(x, 0, new TextElement(" "));
 				}
 			}
 
