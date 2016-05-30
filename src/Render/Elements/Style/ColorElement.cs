@@ -4,7 +4,7 @@ using VierGewinnt.Render.Buffers.Style;
 
 namespace VierGewinnt.Render.Elements.Style {
 	public class ColorElement: WrapElement {
-		private ConsoleColor color;
+		protected ConsoleColor color;
 
 		public ColorElement(ConsoleColor color, Element child = null): base(child) {
 			this.color = color;

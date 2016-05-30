@@ -42,15 +42,11 @@ namespace VierGewinnt {
 			/* Create element to display names */
 			Element names = new HorizontalSplitElement(
 				this.players.Select(player => {
-					return new ColorElement(player.color,
-						new CenterElement(
-							new ConditionalWrapElement(
-								() => currentPlayer().Equals(player),
-								new BackgroundColorElement(ConsoleColor.DarkGray),
-								new TextElement(
-									player.name
-								)
-							)
+					return new CenterElement(
+						new ConditionalWrapElement(
+							() => currentPlayer().Equals(player),
+							new BackgroundColorElement(ConsoleColor.DarkGray),
+							player
 						)
 					);
 				}).ToArray()
@@ -92,7 +88,7 @@ namespace VierGewinnt {
 			for(int x = 0; x < this.board.width; x++) {
 				/* Draw waiting coin */
 				if(this.waiting == x) {
-					waitingGrid.put(x, 0, () => new TerminalCharacter('●', this.players[this.turn].color));
+					waitingGrid.put(x, 0, () => new Coin(this.currentPlayer()).render());
 				} else {
 					waitingGrid.put(x, 0, () => new TerminalCharacter(' '));
 				}

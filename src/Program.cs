@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Linq;
 
 using VierGewinnt.Render;
 
@@ -14,12 +14,17 @@ namespace VierGewinnt {
 
 		/** The entry method */
 		public static void Main(string[] playerNames) {
+			if(playerNames.Length < 2) {
+				Console.WriteLine("Needs at least two player names as arguments");
+				Environment.Exit(1);
+			}
+
 			/* Handle Ctrl-C and exit gracefully */
 			Console.CancelKeyPress += new ConsoleCancelEventHandler(exit);
 
 			/* Setup */
 			renderer.init();
-			game = new Game(renderer, createPlayers(playerNames));
+			game = new Game(renderer, playerNames.Select(name => new Player(name)).ToList());
 
 			/* Pass focus to main view */
 			game.focus();
@@ -33,46 +38,6 @@ namespace VierGewinnt {
 		private static void exit(object o, ConsoleCancelEventArgs e) {
 			renderer.destroy();
 			Environment.Exit(0);
-		}
-
-		/** Print a message and abort the program */
-		private static void abort(string message) {
-			Console.Clear();
-			Console.WriteLine(message);
-			Environment.Exit(1);
-		}
-
-		/** Create users and assign colors */
-		private static List<Player> createPlayers(string[] playerNames) {
-			if(playerNames.Length < 2) {
-				abort("Needs at least two player names as arguments");
-			}
-
-			int colorCount = Enum.GetValues(typeof(ConsoleColor)).Length - 2;
-			if(playerNames.Length > colorCount) {
-				abort("Maximum number of players: " + colorCount);
-			}
-
-			List<Player> players = new List<Player>();
-			Stack<ConsoleColor> colors = new Stack<ConsoleColor>((ConsoleColor[]) Enum.GetValues(typeof(ConsoleColor)));
-
-			foreach(string playerName in playerNames) {
-				ConsoleColor color = colors.Pop();
-
-				/* Skip black color */
-				if(color == ConsoleColor.Black) {
-					color = colors.Pop();
-				}
-
-				/* Skip white color */
-				if(color == ConsoleColor.White) {
-					color = colors.Pop();
-				}
-
-				players.Add(new Player(color, playerName));
-			}
-
-			return players;
 		}
 	}
 }

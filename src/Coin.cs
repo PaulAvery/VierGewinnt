@@ -15,7 +15,7 @@ namespace VierGewinnt {
 		}
 
 		public TerminalCharacter render() {
-			return new TerminalCharacter('●', this.won ? ConsoleColor.White : this.player.color);
+			return new TerminalCharacter('●', this.won ? ConsoleColor.White : this.player.getColor());
 		}
 	}
 }
