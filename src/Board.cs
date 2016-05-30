@@ -194,7 +194,6 @@ namespace VierGewinnt {
 
 		/**
 		 * Check if a diagonal match was found from bottom left to top right
-		 * @todo
 		 */
 		private List<Coin> matchedFourDiagonalBottomToTop(int x, int y) {
 			Coin coin = this.board[x, y];
@@ -227,7 +226,6 @@ namespace VierGewinnt {
 
 		/**
 		 * Check if a diagonal match was found from bottom left to top right
-		 * @todo
 		 */
 		private List<Coin> matchedFourDiagonalTopToBottom(int x, int y) {
 			Coin coin = this.board[x, y];
