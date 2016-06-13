@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['render',['render',['../classVierGewinnt_1_1Render_1_1Element.html#acdc55576dcb3c2dc497135c03c5edbb0',1,'VierGewinnt.Render.Element.render()'],['../classVierGewinnt_1_1Render_1_1ViewElement.html#a0c07db912bd7a1546a05dee17123fc5c',1,'VierGewinnt.Render.ViewElement.render()'],['../classVierGewinnt_1_1Render_1_1Renderer.html#a6067a5376b48f37901ee5f349a96e750',1,'VierGewinnt.Render.Renderer.render()']]],
-  ['renderer',['Renderer',['../classVierGewinnt_1_1Render_1_1Renderer.html#a77553d015f0e77263548a316d5d81ced',1,'VierGewinnt.Render.Renderer.Renderer()'],['../classVierGewinnt_1_1Program.html#ad40cc474d1e60fd53cc595650e1c46f3',1,'VierGewinnt.Program.renderer()'],['../classVierGewinnt_1_1Render_1_1ViewElement.html#a6cfa6ac386bea6c159c4ce41416c0ac2',1,'VierGewinnt.Render.ViewElement.renderer()']]],
-  ['renderer',['Renderer',['../classVierGewinnt_1_1Render_1_1Renderer.html',1,'VierGewinnt::Render']]],
-  ['renderer_2ecs',['Renderer.cs',['../Renderer_8cs.html',1,'']]]
+  ['set',['set',['../classVierGewinnt_1_1Render_1_1Buffer.html#aca62927251f4a6f13577e37b9629947f',1,'VierGewinnt.Render.Buffer.set()'],['../classVierGewinnt_1_1Render_1_1Buffers_1_1Base_1_1WrapBuffer.html#a36ff0bffdb13bbd6fbcd1cb98310806d',1,'VierGewinnt.Render.Buffers.Base.WrapBuffer.set()'],['../classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1BackgroundColorBuffer.html#add414de00769c4f3c0a41cba34980e7e',1,'VierGewinnt.Render.Buffers.Style.BackgroundColorBuffer.set()'],['../classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1ColorBuffer.html#a5fd55e33627b262cdefa93dc3c888dee',1,'VierGewinnt.Render.Buffers.Style.ColorBuffer.set()']]],
+  ['setchild',['setChild',['../classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a080a3a3d6231cfad28f39c00300c709f',1,'VierGewinnt::Render::Elements::Base::WrapElement']]],
+  ['showwinningcoins',['showWinningCoins',['../classVierGewinnt_1_1Board.html#a3b2ff28ff0d16cc4170ed3b4bc0c5d37',1,'VierGewinnt::Board']]],
+  ['state',['state',['../classVierGewinnt_1_1Board.html#a195432752f46f0a9d3ada9b69a85a944',1,'VierGewinnt::Board']]],
+  ['status',['status',['../classVierGewinnt_1_1Board.html#aba21781762f175456f997d1fd3e68720',1,'VierGewinnt.Board.status()'],['../structVierGewinnt_1_1Board_1_1Status.html#aa1cf08880ed74fd83210a160d4d53a41',1,'VierGewinnt.Board.Status.Status()']]],
+  ['status',['Status',['../structVierGewinnt_1_1Board_1_1Status.html',1,'VierGewinnt::Board']]]
 ];

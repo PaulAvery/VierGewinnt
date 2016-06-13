@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['terminalcharacter',['TerminalCharacter',['../structVierGewinnt_1_1Render_1_1TerminalCharacter.html',1,'VierGewinnt::Render']]],
-  ['textelement',['TextElement',['../classVierGewinnt_1_1Render_1_1TextElement.html',1,'VierGewinnt::Render']]]
+  ['status',['Status',['../structVierGewinnt_1_1Board_1_1Status.html',1,'VierGewinnt::Board']]]
 ];

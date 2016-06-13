@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['player',['Player',['../classVierGewinnt_1_1Player.html#a4310c4a326044736e51128481aefe8f8',1,'VierGewinnt::Player']]],
-  ['playeraddview',['PlayerAddView',['../classVierGewinnt_1_1Views_1_1PlayerAddView.html#a0f7df0d7c7e299a2bfb882b003498c75',1,'VierGewinnt::Views::PlayerAddView']]],
-  ['put',['put',['../classVierGewinnt_1_1Render_1_1GridElement.html#a6545d3365d3a3f08c793515a2c7b21af',1,'VierGewinnt::Render::GridElement']]]
+  ['player',['Player',['../classVierGewinnt_1_1Player.html#acd4cf8c027c8a6bbe3728951441cbff2',1,'VierGewinnt::Player']]],
+  ['put',['put',['../classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html#a19b43a1e4cefedf60ebb85a89af873ee',1,'VierGewinnt::Render::Elements::Content::GridElement']]]
 ];

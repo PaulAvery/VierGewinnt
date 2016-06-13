@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['abort',['abort',['../classVierGewinnt_1_1Program.html#a75765bfc6517d94e663b15b7ea7a5a28',1,'VierGewinnt::Program']]],
-  ['addchild',['addChild',['../classVierGewinnt_1_1Render_1_1WrapMultipleElement.html#aa2fffef0d9495c029e9049a5a39d7477',1,'VierGewinnt::Render::WrapMultipleElement']]]
+  ['act',['act',['../classVierGewinnt_1_1Player.html#a4f47db51d4711d31ab4424a1ad8a9384',1,'VierGewinnt.Player.act()'],['../classVierGewinnt_1_1Players_1_1AIRandomPlayer.html#a03d2ef6e1bd115c557b60ec3b3f41cc2',1,'VierGewinnt.Players.AIRandomPlayer.act()'],['../classVierGewinnt_1_1Players_1_1AIStatisticalPlayer.html#a56b971a08bbcb9bcaa90103a3d0b1df7',1,'VierGewinnt.Players.AIStatisticalPlayer.act()'],['../classVierGewinnt_1_1Players_1_1HumanPlayer.html#a4229dd84d4429bb5fadafb986f656943',1,'VierGewinnt.Players.HumanPlayer.act()']]],
+  ['airandomplayer',['AIRandomPlayer',['../classVierGewinnt_1_1Players_1_1AIRandomPlayer.html#a71d30668dfcf04c1ad7800ba5e85ecf0',1,'VierGewinnt::Players::AIRandomPlayer']]],
+  ['aistatisticalplayer',['AIStatisticalPlayer',['../classVierGewinnt_1_1Players_1_1AIStatisticalPlayer.html#aca948f14b9c6c7427b2ea6ea8b78321b',1,'VierGewinnt::Players::AIStatisticalPlayer']]]
 ];

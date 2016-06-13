@@ -1,3 +1,8 @@
 <map id="VierGewinnt.Coin" name="VierGewinnt.Coin">
-<area shape="rect" id="node2" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="5,5,140,97"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="89,160,168,252"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="68,316,189,423"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="214,301,417,437"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="121,5,312,97"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="68,628,203,749"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="71,487,192,579"/>
 </map>

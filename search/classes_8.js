@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['renderer',['Renderer',['../classVierGewinnt_1_1Render_1_1Renderer.html',1,'VierGewinnt::Render']]]
+  ['player',['Player',['../classVierGewinnt_1_1Player.html',1,'VierGewinnt']]],
+  ['program',['Program',['../classVierGewinnt_1_1Program.html',1,'VierGewinnt']]]
 ];

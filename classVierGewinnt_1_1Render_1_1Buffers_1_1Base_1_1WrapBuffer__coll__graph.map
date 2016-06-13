@@ -1,0 +1,5 @@
+<map id="VierGewinnt.Render.Buffers.Base.WrapBuffer" name="VierGewinnt.Render.Buffers.Base.WrapBuffer">
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="103,505,181,759"/>
+<area shape="rect" id="node3" href="$structVierGewinnt_1_1Render_1_1TerminalCharacter.html" title="A representation of a character to be printed to the terminal. " alt="" coords="5,5,199,127"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="139,189,318,443"/>
+</map>

@@ -1,3 +1,6 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node1" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="5,46,184,73"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Base_1_1WrapBuffer.html" title="Base class to wrap a buffer inside of another buffer. " alt="" coords="232,39,421,80"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1BackgroundColorBuffer.html" title="Buffer which sets the background color of its childbuffer. " alt="" coords="469,5,660,47"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1ColorBuffer.html" title="Buffer which sets the foreground color of its childbuffer. " alt="" coords="470,71,659,112"/>
 </map>

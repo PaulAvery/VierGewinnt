@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['centerelement',['CenterElement',['../classVierGewinnt_1_1Render_1_1CenterElement.html',1,'VierGewinnt::Render']]],
-  ['coin',['Coin',['../classVierGewinnt_1_1Coin.html',1,'VierGewinnt']]],
-  ['colorbuffer',['ColorBuffer',['../classVierGewinnt_1_1Render_1_1ColorBuffer.html',1,'VierGewinnt::Render']]],
-  ['colorelement',['ColorElement',['../classVierGewinnt_1_1Render_1_1ColorElement.html',1,'VierGewinnt::Render']]],
-  ['conditionalwrapelement',['ConditionalWrapElement',['../classVierGewinnt_1_1Render_1_1ConditionalWrapElement.html',1,'VierGewinnt::Render']]]
+  ['backgroundcolorbuffer',['BackgroundColorBuffer',['../classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1BackgroundColorBuffer.html',1,'VierGewinnt::Render::Buffers::Style']]],
+  ['backgroundcolorelement',['BackgroundColorElement',['../classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1BackgroundColorElement.html',1,'VierGewinnt::Render::Elements::Style']]],
+  ['board',['Board',['../classVierGewinnt_1_1Board.html',1,'VierGewinnt']]],
+  ['buffer',['Buffer',['../classVierGewinnt_1_1Render_1_1Buffer.html',1,'VierGewinnt::Render']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['verticalfloatelement',['VerticalFloatElement',['../classVierGewinnt_1_1Render_1_1VerticalFloatElement.html#af2ee4e4f4660b40d59ccf4c35c9e16c8',1,'VierGewinnt::Render::VerticalFloatElement']]],
-  ['view',['view',['../classVierGewinnt_1_1Render_1_1Buffer.html#a2a7b07f12f38349cbbec60f604b586b5',1,'VierGewinnt::Render::Buffer']]],
-  ['viewelement',['ViewElement',['../classVierGewinnt_1_1Render_1_1ViewElement.html#a868c31a540cee14bb0fd307d93e6c3e3',1,'VierGewinnt::Render::ViewElement']]]
+  ['wrapbuffer',['WrapBuffer',['../classVierGewinnt_1_1Render_1_1Buffers_1_1Base_1_1WrapBuffer.html#a154ca9a103fac2ee1058cf5225ae9101',1,'VierGewinnt::Render::Buffers::Base::WrapBuffer']]],
+  ['wrapelement',['WrapElement',['../classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a9c1103f0fcaca0b5f3e8e855e5e25712',1,'VierGewinnt::Render::Elements::Base::WrapElement']]],
+  ['wrapmultipleelement',['WrapMultipleElement',['../classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapMultipleElement.html#a5fef9ef7a15cac7d854572ebdb5979ea',1,'VierGewinnt::Render::Elements::Base::WrapMultipleElement']]]
 ];

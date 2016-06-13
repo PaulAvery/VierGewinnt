@@ -1,5 +1,11 @@
 <map id="VierGewinnt.Board" name="VierGewinnt.Board">
-<area shape="rect" id="node2" href="$structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="5,160,179,237"/>
-<area shape="rect" id="node3" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="122,5,257,97"/>
-<area shape="rect" id="node4" href="$classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="203,160,327,237"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="5,309,120,430"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="135,160,214,252"/>
+<area shape="rect" id="node8" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="195,316,317,423"/>
+<area shape="rect" id="node9" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="341,301,544,437"/>
+<area shape="rect" id="node10" href="$classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="98,812,222,904"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="131,5,322,97"/>
+<area shape="rect" id="node5" href="$structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="247,819,420,897"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="250,628,385,749"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="207,487,329,579"/>
 </map>

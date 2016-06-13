@@ -1,0 +1,5 @@
+<map id="VierGewinnt.Render.Elements.Base.WrapMultipleElement" name="VierGewinnt.Render.Elements.Base.WrapMultipleElement">
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1HorizontalSplitElement.html" title="Element which spaces out its children evenly. " alt="" coords="5,300,208,407"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1VerticalFloatElement.html" title="Renders its childrens beneath each other, as tightly spaced as possible. " alt="" coords="232,300,435,407"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="181,5,259,97"/>
+</map>

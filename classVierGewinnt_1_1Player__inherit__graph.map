@@ -1,0 +1,8 @@
+<map id="VierGewinnt.Player" name="VierGewinnt.Player">
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Players_1_1AIRandomPlayer.html" title="An AI player picking moves at random. " alt="" coords="5,624,212,731"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Players_1_1AIStatisticalPlayer.html" title="Simple representation of a player. " alt="" coords="237,624,453,731"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Players_1_1HumanPlayer.html" title="Simple representation of a human player. " alt="" coords="477,624,663,731"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="284,300,405,392"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="284,145,405,252"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="305,5,384,97"/>
+</map>

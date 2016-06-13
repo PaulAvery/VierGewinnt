@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['name',['name',['../classVierGewinnt_1_1Player.html#a37627acbd6685e0f03317e3e8cb7b156',1,'VierGewinnt::Player']]],
-  ['names',['names',['../classVierGewinnt_1_1Views_1_1PlayerAddView.html#ad29f1231278980a4a387a0c0874dc1f1',1,'VierGewinnt::Views::PlayerAddView']]]
+  ['offsetx',['offsetX',['../classVierGewinnt_1_1Render_1_1Buffer.html#a808a44e37c8935b5daad2259206b5562',1,'VierGewinnt::Render::Buffer']]],
+  ['offsety',['offsetY',['../classVierGewinnt_1_1Render_1_1Buffer.html#a5702bbed217c11e804e8aa2fcb367865',1,'VierGewinnt::Render::Buffer']]]
 ];

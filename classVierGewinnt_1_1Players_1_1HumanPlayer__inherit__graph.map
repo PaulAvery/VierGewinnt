@@ -1,0 +1,6 @@
+<map id="VierGewinnt.Players.HumanPlayer" name="VierGewinnt.Players.HumanPlayer">
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="49,440,148,576"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="38,300,159,392"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="38,145,159,252"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="59,5,138,97"/>
+</map>

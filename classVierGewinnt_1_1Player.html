@@ -93,9 +93,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
 <a href="#pub-attribs">Öffentliche Attribute</a> &#124;
+<a href="#pro-attribs">Geschützte Attribute</a> &#124;
+<a href="#pri-static-attribs">Statische, private Attribute</a> &#124;
 <a href="classVierGewinnt_1_1Player-members.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
-<div class="title">VierGewinnt.Player Klassenreferenz</div>  </div>
+<div class="title">VierGewinnt.Player Klassenreferenz<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -104,27 +106,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
-<tr class="memitem:a4310c4a326044736e51128481aefe8f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#a4310c4a326044736e51128481aefe8f8">Player</a> (ConsoleColor <a class="el" href="classVierGewinnt_1_1Player.html#a21eec4ae907200c27b96728109a50f8f">color</a>, string <a class="el" href="classVierGewinnt_1_1Player.html#a37627acbd6685e0f03317e3e8cb7b156">name</a>)</td></tr>
-<tr class="separator:a4310c4a326044736e51128481aefe8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4cf8c027c8a6bbe3728951441cbff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#acd4cf8c027c8a6bbe3728951441cbff2">Player</a> (string name, int <a class="el" href="classVierGewinnt_1_1Player.html#ace70b4da5426a6eac7139e61592b60d4">width</a>)</td></tr>
+<tr class="separator:acd4cf8c027c8a6bbe3728951441cbff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661302bdc322d456b96e636c50ecca69"><td class="memItemLeft" align="right" valign="top">ConsoleColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#a661302bdc322d456b96e636c50ecca69">getColor</a> ()</td></tr>
+<tr class="memdesc:a661302bdc322d456b96e636c50ecca69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the players color.  <a href="#a661302bdc322d456b96e636c50ecca69">Mehr ...</a><br /></td></tr>
+<tr class="separator:a661302bdc322d456b96e636c50ecca69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f47db51d4711d31ab4424a1ad8a9384"><td class="memItemLeft" align="right" valign="top">abstract int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#a4f47db51d4711d31ab4424a1ad8a9384">act</a> (<a class="el" href="classVierGewinnt_1_1Coin.html">Coin</a>[,] board)</td></tr>
+<tr class="memdesc:a4f47db51d4711d31ab4424a1ad8a9384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes focus to the player and allows it to act.  <a href="#a4f47db51d4711d31ab4424a1ad8a9384">Mehr ...</a><br /></td></tr>
+<tr class="separator:a4f47db51d4711d31ab4424a1ad8a9384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement')"><img src="closed.png" alt="-"/>&#160;Öffentliche Methoden geerbt von <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html">VierGewinnt.Render.Elements.Style.ColorElement</a></td></tr>
+<tr class="memitem:a86d23e200593becc1fa65d0b4fd55d63 inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#a86d23e200593becc1fa65d0b4fd55d63">ColorElement</a> (ConsoleColor <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#a4753f8d04c33ad5ef9b92b2be16b7eb1">color</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a> <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a150d70c8a558be36fa2fe8573135e614">child</a>=null)</td></tr>
+<tr class="separator:a86d23e200593becc1fa65d0b4fd55d63 inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c96f374edd19586d7639f511253410 inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#aa8c96f374edd19586d7639f511253410">draw</a> (<a class="el" href="classVierGewinnt_1_1Render_1_1Buffer.html">Buffer</a> canvas)</td></tr>
+<tr class="memdesc:aa8c96f374edd19586d7639f511253410 inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the childs <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#aa8c96f374edd19586d7639f511253410" title="Call the childs draw() by default. ">draw()</a> by default.  <a href="#aa8c96f374edd19586d7639f511253410">Mehr ...</a><br /></td></tr>
+<tr class="separator:aa8c96f374edd19586d7639f511253410 inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement')"><img src="closed.png" alt="-"/>&#160;Öffentliche Methoden geerbt von <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html">VierGewinnt.Render.Elements.Base.WrapElement</a></td></tr>
+<tr class="memitem:a9c1103f0fcaca0b5f3e8e855e5e25712 inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a9c1103f0fcaca0b5f3e8e855e5e25712">WrapElement</a> (<a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a> <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a150d70c8a558be36fa2fe8573135e614">child</a>=null)</td></tr>
+<tr class="separator:a9c1103f0fcaca0b5f3e8e855e5e25712 inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080a3a3d6231cfad28f39c00300c709f inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a080a3a3d6231cfad28f39c00300c709f">setChild</a> (<a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a> <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a150d70c8a558be36fa2fe8573135e614">child</a>)</td></tr>
+<tr class="memdesc:a080a3a3d6231cfad28f39c00300c709f inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the child element.  <a href="#a080a3a3d6231cfad28f39c00300c709f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a080a3a3d6231cfad28f39c00300c709f inherit pub_methods_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classVierGewinnt_1_1Render_1_1Element"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classVierGewinnt_1_1Render_1_1Element')"><img src="closed.png" alt="-"/>&#160;Öffentliche Methoden geerbt von <a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">VierGewinnt.Render.Element</a></td></tr>
+<tr class="memitem:acdc55576dcb3c2dc497135c03c5edbb0 inherit pub_methods_classVierGewinnt_1_1Render_1_1Element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html#acdc55576dcb3c2dc497135c03c5edbb0">render</a> ()</td></tr>
+<tr class="memdesc:acdc55576dcb3c2dc497135c03c5edbb0 inherit pub_methods_classVierGewinnt_1_1Render_1_1Element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply chain upward by default.  <a href="#acdc55576dcb3c2dc497135c03c5edbb0">Mehr ...</a><br /></td></tr>
+<tr class="separator:acdc55576dcb3c2dc497135c03c5edbb0 inherit pub_methods_classVierGewinnt_1_1Render_1_1Element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Öffentliche Attribute</h2></td></tr>
-<tr class="memitem:a21eec4ae907200c27b96728109a50f8f"><td class="memItemLeft" align="right" valign="top">readonly ConsoleColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#a21eec4ae907200c27b96728109a50f8f">color</a></td></tr>
-<tr class="memdesc:a21eec4ae907200c27b96728109a50f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Players color This will be used in rendering so it is a console color.  <a href="#a21eec4ae907200c27b96728109a50f8f">Mehr ...</a><br /></td></tr>
-<tr class="separator:a21eec4ae907200c27b96728109a50f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37627acbd6685e0f03317e3e8cb7b156"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#a37627acbd6685e0f03317e3e8cb7b156">name</a></td></tr>
-<tr class="memdesc:a37627acbd6685e0f03317e3e8cb7b156"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classVierGewinnt_1_1Player.html" title="Simple representation of a player. ">Player</a> name.  <a href="#a37627acbd6685e0f03317e3e8cb7b156">Mehr ...</a><br /></td></tr>
-<tr class="separator:a37627acbd6685e0f03317e3e8cb7b156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4adcf416afa39c47b1d8b7cd650708"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html">GridElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#afd4adcf416afa39c47b1d8b7cd650708">waitingGrid</a></td></tr>
+<tr class="memdesc:afd4adcf416afa39c47b1d8b7cd650708"><td class="mdescLeft">&#160;</td><td class="mdescRight">The grid element for the waiting coin.  <a href="#afd4adcf416afa39c47b1d8b7cd650708">Mehr ...</a><br /></td></tr>
+<tr class="separator:afd4adcf416afa39c47b1d8b7cd650708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement')"><img src="closed.png" alt="-"/>&#160;Öffentliche Attribute geerbt von <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html">VierGewinnt.Render.Elements.Base.WrapElement</a></td></tr>
+<tr class="memitem:a150d70c8a558be36fa2fe8573135e614 inherit pub_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a150d70c8a558be36fa2fe8573135e614">child</a></td></tr>
+<tr class="memdesc:a150d70c8a558be36fa2fe8573135e614 inherit pub_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">The child element.  <a href="#a150d70c8a558be36fa2fe8573135e614">Mehr ...</a><br /></td></tr>
+<tr class="separator:a150d70c8a558be36fa2fe8573135e614 inherit pub_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Geschützte Attribute</h2></td></tr>
+<tr class="memitem:ace70b4da5426a6eac7139e61592b60d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#ace70b4da5426a6eac7139e61592b60d4">width</a></td></tr>
+<tr class="memdesc:ace70b4da5426a6eac7139e61592b60d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the waitingGrid.  <a href="#ace70b4da5426a6eac7139e61592b60d4">Mehr ...</a><br /></td></tr>
+<tr class="separator:ace70b4da5426a6eac7139e61592b60d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement')"><img src="closed.png" alt="-"/>&#160;Geschützte Attribute geerbt von <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html">VierGewinnt.Render.Elements.Style.ColorElement</a></td></tr>
+<tr class="memitem:a4753f8d04c33ad5ef9b92b2be16b7eb1 inherit pro_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td class="memItemLeft" align="right" valign="top">ConsoleColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#a4753f8d04c33ad5ef9b92b2be16b7eb1">color</a></td></tr>
+<tr class="separator:a4753f8d04c33ad5ef9b92b2be16b7eb1 inherit pro_attribs_classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:ab98236ac71bb559f2d10d6dc6f23fa01"><td class="memItemLeft" align="right" valign="top">static Stack&lt; ConsoleColor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Player.html#ab98236ac71bb559f2d10d6dc6f23fa01">colors</a></td></tr>
+<tr class="memdesc:ab98236ac71bb559f2d10d6dc6f23fa01"><td class="mdescLeft">&#160;</td><td class="mdescRight">All available colors.  <a href="#ab98236ac71bb559f2d10d6dc6f23fa01">Mehr ...</a><br /></td></tr>
+<tr class="separator:ab98236ac71bb559f2d10d6dc6f23fa01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Weitere Geerbte Elemente</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_classVierGewinnt_1_1Render_1_1Element"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classVierGewinnt_1_1Render_1_1Element')"><img src="closed.png" alt="-"/>&#160;Statische öffentliche Attribute geerbt von <a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">VierGewinnt.Render.Element</a></td></tr>
+<tr class="memitem:addc04d4d1d8156112896eec43567fada inherit pub_static_attribs_classVierGewinnt_1_1Render_1_1Element"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html#addc04d4d1d8156112896eec43567fada">root</a></td></tr>
+<tr class="separator:addc04d4d1d8156112896eec43567fada inherit pub_static_attribs_classVierGewinnt_1_1Render_1_1Element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p>Simple representation of a player. </p>
 </div><div class="dynheader">
+Klassendiagramm für VierGewinnt.Player:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVierGewinnt_1_1Player__inherit__graph.png" border="0" usemap="#VierGewinnt_8Player_inherit__map" alt="Inheritance graph"/></div>
+<map name="VierGewinnt_8Player_inherit__map" id="VierGewinnt_8Player_inherit__map">
+<area shape="rect" id="node5" href="classVierGewinnt_1_1Players_1_1AIRandomPlayer.html" title="An AI player picking moves at random. " alt="" coords="5,624,212,731"/>
+<area shape="rect" id="node6" href="classVierGewinnt_1_1Players_1_1AIStatisticalPlayer.html" title="Simple representation of a player. " alt="" coords="237,624,453,731"/>
+<area shape="rect" id="node7" href="classVierGewinnt_1_1Players_1_1HumanPlayer.html" title="Simple representation of a human player. " alt="" coords="477,624,663,731"/>
+<area shape="rect" id="node2" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="284,300,405,392"/>
+<area shape="rect" id="node3" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="284,145,405,252"/>
+<area shape="rect" id="node4" href="classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="305,5,384,97"/>
+</map>
+</div>
+<div class="dynheader">
 Zusammengehörigkeiten von VierGewinnt.Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVierGewinnt_1_1Player__coll__graph.png" border="0" usemap="#VierGewinnt_8Player_coll__map" alt="Collaboration graph"/></div>
+<map name="VierGewinnt_8Player_coll__map" id="VierGewinnt_8Player_coll__map">
+<area shape="rect" id="node2" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="63,487,184,579"/>
+<area shape="rect" id="node3" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="5,316,127,423"/>
+<area shape="rect" id="node4" href="classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="128,160,207,252"/>
+<area shape="rect" id="node6" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="151,301,354,437"/>
+<area shape="rect" id="node5" href="classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="72,5,263,97"/>
+</map>
 </div>
 <h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
-<a class="anchor" id="a4310c4a326044736e51128481aefe8f8"></a>
+<a class="anchor" id="acd4cf8c027c8a6bbe3728951441cbff2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -134,14 +200,14 @@ Zusammengehörigkeiten von VierGewinnt.Player:</div>
         <tr>
           <td class="memname">VierGewinnt.Player.Player </td>
           <td>(</td>
-          <td class="paramtype">ConsoleColor&#160;</td>
-          <td class="paramname"><em>color</em>, </td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,32 +224,116 @@ Zusammengehörigkeiten von VierGewinnt.Player:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="a4f47db51d4711d31ab4424a1ad8a9384"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract int VierGewinnt.Player.act </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVierGewinnt_1_1Coin.html">Coin</a>&#160;</td>
+          <td class="paramname"><em>board</em>[,]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Passes focus to the player and allows it to act. </p>
+
+<p>Implementiert in <a class="el" href="classVierGewinnt_1_1Players_1_1HumanPlayer.html#a4229dd84d4429bb5fadafb986f656943">VierGewinnt.Players.HumanPlayer</a>, <a class="el" href="classVierGewinnt_1_1Players_1_1AIRandomPlayer.html#a03d2ef6e1bd115c557b60ec3b3f41cc2">VierGewinnt.Players.AIRandomPlayer</a> und <a class="el" href="classVierGewinnt_1_1Players_1_1AIStatisticalPlayer.html#a56b971a08bbcb9bcaa90103a3d0b1df7">VierGewinnt.Players.AIStatisticalPlayer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a661302bdc322d456b96e636c50ecca69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConsoleColor VierGewinnt.Player.getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the players color. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Dokumentation der Datenelemente</h2>
-<a class="anchor" id="a21eec4ae907200c27b96728109a50f8f"></a>
+<a class="anchor" id="ab98236ac71bb559f2d10d6dc6f23fa01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Stack&lt;ConsoleColor&gt; VierGewinnt.Player.colors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Stack&lt;ConsoleColor&gt;(</div><div class="line">            ((ConsoleColor[]) Enum.GetValues(typeof(ConsoleColor))).Where(</div><div class="line">                <a class="code" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#a4753f8d04c33ad5ef9b92b2be16b7eb1">color</a> =&gt; <a class="code" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#a4753f8d04c33ad5ef9b92b2be16b7eb1">color</a> != ConsoleColor.Black &amp;&amp; <a class="code" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#a4753f8d04c33ad5ef9b92b2be16b7eb1">color</a> != ConsoleColor.White</div><div class="line">            )</div><div class="line">        )</div></div><!-- fragment -->
+<p>All available colors. </p>
+
+</div>
+</div>
+<a class="anchor" id="afd4adcf416afa39c47b1d8b7cd650708"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly ConsoleColor VierGewinnt.Player.color</td>
+          <td class="memname"><a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html">GridElement</a> VierGewinnt.Player.waitingGrid</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Players color This will be used in rendering so it is a console color. </p>
+<p>The grid element for the waiting coin. </p>
 
 </div>
 </div>
-<a class="anchor" id="a37627acbd6685e0f03317e3e8cb7b156"></a>
+<a class="anchor" id="ace70b4da5426a6eac7139e61592b60d4"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly string VierGewinnt.Player.name</td>
+          <td class="memname">int VierGewinnt.Player.width</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classVierGewinnt_1_1Player.html" title="Simple representation of a player. ">Player</a> name. </p>
+<p>Width of the waitingGrid. </p>
 
 </div>
 </div>

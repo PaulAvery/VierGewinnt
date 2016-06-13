@@ -1,0 +1,4 @@
+<map id="VierGewinnt.Render.Elements.Content.GridElement" name="VierGewinnt.Render.Elements.Content.GridElement">
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="7,344,206,671"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="67,5,146,97"/>
+</map>

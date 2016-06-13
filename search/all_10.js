@@ -1,13 +1,22 @@
 var searchData=
 [
-  ['terminalcharacter',['TerminalCharacter',['../structVierGewinnt_1_1Render_1_1TerminalCharacter.html',1,'VierGewinnt::Render']]],
-  ['terminalcharacter',['TerminalCharacter',['../structVierGewinnt_1_1Render_1_1TerminalCharacter.html#a85fe7a2de6fbd9b457cffd66fd269cef',1,'VierGewinnt::Render::TerminalCharacter']]],
-  ['terminalcharacter_2ecs',['TerminalCharacter.cs',['../TerminalCharacter_8cs.html',1,'']]],
-  ['text',['text',['../classVierGewinnt_1_1Render_1_1TextElement.html#aea5049d4b780bb33810af1dda1d6e952',1,'VierGewinnt::Render::TextElement']]],
-  ['textelement',['TextElement',['../classVierGewinnt_1_1Render_1_1TextElement.html',1,'VierGewinnt::Render']]],
-  ['textelement',['TextElement',['../classVierGewinnt_1_1Render_1_1TextElement.html#a9b15764b6fe8b1eae00a5ebd4333486d',1,'VierGewinnt::Render::TextElement']]],
-  ['textelement_2ecs',['TextElement.cs',['../TextElement_8cs.html',1,'']]],
-  ['timer',['timer',['../classVierGewinnt_1_1Render_1_1Renderer.html#a37bbf5743d5156ec1788bb01a828d6ab',1,'VierGewinnt::Render::Renderer']]],
-  ['title',['title',['../classVierGewinnt_1_1Render_1_1Renderer.html#a049430f171089ad9aaabfa2db1e27c9e',1,'VierGewinnt::Render::Renderer']]],
-  ['turn',['turn',['../classVierGewinnt_1_1Game.html#a93354cad3f157c0779447c06a84481b5',1,'VierGewinnt::Game']]]
+  ['base',['Base',['../namespaceVierGewinnt_1_1Render_1_1Buffers_1_1Base.html',1,'VierGewinnt::Render::Buffers']]],
+  ['base',['Base',['../namespaceVierGewinnt_1_1Render_1_1Elements_1_1Base.html',1,'VierGewinnt::Render::Elements']]],
+  ['buffers',['Buffers',['../namespaceVierGewinnt_1_1Render_1_1Buffers.html',1,'VierGewinnt::Render']]],
+  ['content',['Content',['../namespaceVierGewinnt_1_1Render_1_1Elements_1_1Content.html',1,'VierGewinnt::Render::Elements']]],
+  ['elements',['Elements',['../namespaceVierGewinnt_1_1Render_1_1Elements.html',1,'VierGewinnt::Render']]],
+  ['layout',['Layout',['../namespaceVierGewinnt_1_1Render_1_1Elements_1_1Layout.html',1,'VierGewinnt::Render::Elements']]],
+  ['players',['Players',['../namespaceVierGewinnt_1_1Players.html',1,'VierGewinnt']]],
+  ['render',['Render',['../namespaceVierGewinnt_1_1Render.html',1,'VierGewinnt']]],
+  ['style',['Style',['../namespaceVierGewinnt_1_1Render_1_1Buffers_1_1Style.html',1,'VierGewinnt::Render::Buffers']]],
+  ['style',['Style',['../namespaceVierGewinnt_1_1Render_1_1Elements_1_1Style.html',1,'VierGewinnt::Render::Elements']]],
+  ['value',['value',['../structVierGewinnt_1_1Render_1_1TerminalCharacter.html#ad372572c71b19f5e9b257b18e138b3b5',1,'VierGewinnt::Render::TerminalCharacter']]],
+  ['verticalfloatelement',['VerticalFloatElement',['../classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1VerticalFloatElement.html',1,'VierGewinnt::Render::Elements::Layout']]],
+  ['verticalfloatelement',['VerticalFloatElement',['../classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1VerticalFloatElement.html#a4b528b40cb91151f821c05282f4324df',1,'VierGewinnt::Render::Elements::Layout::VerticalFloatElement']]],
+  ['verticalfloatelement_2ecs',['VerticalFloatElement.cs',['../VerticalFloatElement_8cs.html',1,'']]],
+  ['viergewinnt',['VierGewinnt',['../namespaceVierGewinnt.html',1,'']]],
+  ['view',['view',['../classVierGewinnt_1_1Render_1_1Buffer.html#a2a7b07f12f38349cbbec60f604b586b5',1,'VierGewinnt::Render::Buffer']]],
+  ['viewelement',['ViewElement',['../classVierGewinnt_1_1Render_1_1Elements_1_1ViewElement.html',1,'VierGewinnt::Render::Elements']]],
+  ['viewelement',['ViewElement',['../classVierGewinnt_1_1Render_1_1Elements_1_1ViewElement.html#abbfb62918b498247ac48399b1bf0efcd',1,'VierGewinnt::Render::Elements::ViewElement']]],
+  ['viewelement_2ecs',['ViewElement.cs',['../ViewElement_8cs.html',1,'']]]
 ];

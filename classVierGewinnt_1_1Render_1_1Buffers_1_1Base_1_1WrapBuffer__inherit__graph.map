@@ -1,0 +1,5 @@
+<map id="VierGewinnt.Render.Buffers.Base.WrapBuffer" name="VierGewinnt.Render.Buffers.Base.WrapBuffer">
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1BackgroundColorBuffer.html" title="Buffer which sets the background color of its childbuffer. " alt="" coords="5,505,196,612"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1ColorBuffer.html" title="Buffer which sets the foreground color of its childbuffer. " alt="" coords="221,505,410,612"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Buffer.html" title="A class to represent a rectangular grid of TerminalCharacters. " alt="" coords="162,5,253,288"/>
+</map>

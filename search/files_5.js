@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['horizontalsplitelement_2ecs',['HorizontalSplitElement.cs',['../HorizontalSplitElement_8cs.html',1,'']]]
+  ['fixedheightelement_2ecs',['FixedHeightElement.cs',['../FixedHeightElement_8cs.html',1,'']]]
 ];

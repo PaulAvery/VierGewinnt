@@ -1,0 +1,8 @@
+<map id="VierGewinnt.Render.Elements.Style.ColorElement" name="VierGewinnt.Render.Elements.Style.ColorElement">
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="277,455,412,591"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="284,145,405,252"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="305,5,384,97"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Players_1_1AIRandomPlayer.html" title="An AI player picking moves at random. " alt="" coords="5,639,212,745"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Players_1_1AIStatisticalPlayer.html" title="Simple representation of a player. " alt="" coords="237,639,453,745"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Players_1_1HumanPlayer.html" title="Simple representation of a human player. " alt="" coords="477,639,663,745"/>
+</map>

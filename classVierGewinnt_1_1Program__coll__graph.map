@@ -1,8 +1,15 @@
 <map id="VierGewinnt.Program" name="VierGewinnt.Program">
-<area shape="rect" id="node2" href="$classVierGewinnt_1_1Game.html" title="Represents the game and its internal state. " alt="" coords="86,660,218,781"/>
-<area shape="rect" id="node3" href="$classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="53,300,251,583"/>
-<area shape="rect" id="node4" href="$structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="5,160,179,237"/>
-<area shape="rect" id="node5" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="122,5,257,97"/>
-<area shape="rect" id="node6" href="$classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="203,160,327,237"/>
-<area shape="rect" id="node7" href="$classVierGewinnt_1_1Render_1_1Renderer.html" title="A class to render a given Element instance to the console. " alt="" coords="242,645,438,796"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Game.html" title="The games main view. " alt="" coords="15,1385,147,1565"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Elements_1_1ViewElement.html" title="Base element for a view. " alt="" coords="5,1128,124,1220"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="127,316,248,423"/>
+<area shape="rect" id="node12" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="160,487,281,579"/>
+<area shape="rect" id="node5" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="427,160,505,252"/>
+<area shape="rect" id="node9" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="567,309,682,430"/>
+<area shape="rect" id="node13" href="$classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="273,301,475,437"/>
+<area shape="rect" id="node14" href="$classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="463,841,587,933"/>
+<area shape="rect" id="node6" href="$classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="423,5,613,97"/>
+<area shape="rect" id="node7" href="$classVierGewinnt_1_1Render_1_1Renderer.html" title="A class to render a given Element instance to the console. " alt="" coords="44,812,240,963"/>
+<area shape="rect" id="node8" href="$classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="360,1025,559,1323"/>
+<area shape="rect" id="node10" href="$structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="265,849,438,926"/>
+<area shape="rect" id="node11" href="$classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="292,628,427,749"/>
 </map>

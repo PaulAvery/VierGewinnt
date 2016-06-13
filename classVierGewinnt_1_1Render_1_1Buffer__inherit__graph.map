@@ -1,6 +1,5 @@
 <map id="VierGewinnt.Render.Buffer" name="VierGewinnt.Render.Buffer">
-<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1WrapBuffer.html" title="Base class to wrap a buffer inside of another buffer. " alt="" coords="224,336,433,443"/>
-<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1BackgroundColorBuffer.html" title="{VierGewinnt.Render.Background\lColorBuffer\n|&#45; color\l|+ BackgroundColorBuffer()\l+ set()\l}" alt="" coords="5,491,217,597"/>
-<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1ColorBuffer.html" title="{VierGewinnt.Render.Color\lBuffer\n|&#45; color\l|+ ColorBuffer()\l+ set()\l}" alt="" coords="241,491,416,597"/>
-<area shape="rect" id="node5" href="$classVierGewinnt_1_1Render_1_1UnderlineBuffer.html" title="{VierGewinnt.Render.Underline\lBuffer\n||+ UnderlineBuffer()\l+ set()\l}" alt="" coords="440,491,639,597"/>
+<area shape="rect" id="node2" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Base_1_1WrapBuffer.html" title="Base class to wrap a buffer inside of another buffer. " alt="" coords="113,336,302,457"/>
+<area shape="rect" id="node3" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1BackgroundColorBuffer.html" title="Buffer which sets the background color of its childbuffer. " alt="" coords="5,505,196,612"/>
+<area shape="rect" id="node4" href="$classVierGewinnt_1_1Render_1_1Buffers_1_1Style_1_1ColorBuffer.html" title="Buffer which sets the foreground color of its childbuffer. " alt="" coords="221,505,410,612"/>
 </map>

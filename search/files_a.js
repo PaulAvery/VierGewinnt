@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['underlinebuffer_2ecs',['UnderlineBuffer.cs',['../UnderlineBuffer_8cs.html',1,'']]],
-  ['underlineelement_2ecs',['UnderlineElement.cs',['../UnderlineElement_8cs.html',1,'']]]
+  ['terminalcharacter_2ecs',['TerminalCharacter.cs',['../TerminalCharacter_8cs.html',1,'']]],
+  ['textelement_2ecs',['TextElement.cs',['../TextElement_8cs.html',1,'']]]
 ];

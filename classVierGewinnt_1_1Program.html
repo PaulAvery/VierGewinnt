@@ -114,12 +114,6 @@ Private, statische Methoden</h2></td></tr>
 <tr class="memitem:a9cb36a109d43bc2a8e823cf954acb5d6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Program.html#a9cb36a109d43bc2a8e823cf954acb5d6">exit</a> (object o, ConsoleCancelEventArgs e)</td></tr>
 <tr class="memdesc:a9cb36a109d43bc2a8e823cf954acb5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup on exit.  <a href="#a9cb36a109d43bc2a8e823cf954acb5d6">Mehr ...</a><br /></td></tr>
 <tr class="separator:a9cb36a109d43bc2a8e823cf954acb5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75765bfc6517d94e663b15b7ea7a5a28"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Program.html#a75765bfc6517d94e663b15b7ea7a5a28">abort</a> (string message)</td></tr>
-<tr class="memdesc:a75765bfc6517d94e663b15b7ea7a5a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message and abort the program.  <a href="#a75765bfc6517d94e663b15b7ea7a5a28">Mehr ...</a><br /></td></tr>
-<tr class="separator:a75765bfc6517d94e663b15b7ea7a5a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89c17acb4904ab243293d5db34516b99"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classVierGewinnt_1_1Player.html">Player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Program.html#a89c17acb4904ab243293d5db34516b99">createPlayers</a> (string[] playerNames)</td></tr>
-<tr class="memdesc:a89c17acb4904ab243293d5db34516b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create users and assign colors.  <a href="#a89c17acb4904ab243293d5db34516b99">Mehr ...</a><br /></td></tr>
-<tr class="separator:a89c17acb4904ab243293d5db34516b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Statische, private Attribute</h2></td></tr>
@@ -137,67 +131,22 @@ Zusammengehörigkeiten von VierGewinnt.Program:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVierGewinnt_1_1Program__coll__graph.png" border="0" usemap="#VierGewinnt_8Program_coll__map" alt="Collaboration graph"/></div>
 <map name="VierGewinnt_8Program_coll__map" id="VierGewinnt_8Program_coll__map">
-<area shape="rect" id="node2" href="classVierGewinnt_1_1Game.html" title="Represents the game and its internal state. " alt="" coords="86,660,218,781"/>
-<area shape="rect" id="node3" href="classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="53,300,251,583"/>
-<area shape="rect" id="node4" href="structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="5,160,179,237"/>
-<area shape="rect" id="node5" href="classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="122,5,257,97"/>
-<area shape="rect" id="node6" href="classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="203,160,327,237"/>
-<area shape="rect" id="node7" href="classVierGewinnt_1_1Render_1_1Renderer.html" title="A class to render a given Element instance to the console. " alt="" coords="242,645,438,796"/>
+<area shape="rect" id="node2" href="classVierGewinnt_1_1Game.html" title="The games main view. " alt="" coords="15,1385,147,1565"/>
+<area shape="rect" id="node3" href="classVierGewinnt_1_1Render_1_1Elements_1_1ViewElement.html" title="Base element for a view. " alt="" coords="5,1128,124,1220"/>
+<area shape="rect" id="node4" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="127,316,248,423"/>
+<area shape="rect" id="node12" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="160,487,281,579"/>
+<area shape="rect" id="node5" href="classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="427,160,505,252"/>
+<area shape="rect" id="node9" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="567,309,682,430"/>
+<area shape="rect" id="node13" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="273,301,475,437"/>
+<area shape="rect" id="node14" href="classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="463,841,587,933"/>
+<area shape="rect" id="node6" href="classVierGewinnt_1_1Render_1_1Element.html" title="A base class to represent an element to render to the terminal. " alt="" coords="423,5,613,97"/>
+<area shape="rect" id="node7" href="classVierGewinnt_1_1Render_1_1Renderer.html" title="A class to render a given Element instance to the console. " alt="" coords="44,812,240,963"/>
+<area shape="rect" id="node8" href="classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="360,1025,559,1323"/>
+<area shape="rect" id="node10" href="structVierGewinnt_1_1Board_1_1Status.html" title="Utility Struct to represent game state. " alt="" coords="265,849,438,926"/>
+<area shape="rect" id="node11" href="classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="292,628,427,749"/>
 </map>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
-<a class="anchor" id="a75765bfc6517d94e663b15b7ea7a5a28"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void VierGewinnt.Program.abort </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Print a message and abort the program. </p>
-
-</div>
-</div>
-<a class="anchor" id="a89c17acb4904ab243293d5db34516b99"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static List&lt;<a class="el" href="classVierGewinnt_1_1Player.html">Player</a>&gt; VierGewinnt.Program.createPlayers </td>
-          <td>(</td>
-          <td class="paramtype">string[]&#160;</td>
-          <td class="paramname"><em>playerNames</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create users and assign colors. </p>
-
-</div>
-</div>
 <a class="anchor" id="a9cb36a109d43bc2a8e823cf954acb5d6"></a>
 <div class="memitem">
 <div class="memproto">

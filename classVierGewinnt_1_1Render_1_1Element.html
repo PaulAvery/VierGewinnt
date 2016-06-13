@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
-<a href="#pub-attribs">Öffentliche Attribute</a> &#124;
+<a href="#pub-static-attribs">Statische öffentliche Attribute</a> &#124;
 <a href="classVierGewinnt_1_1Render_1_1Element-members.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
 <div class="title">VierGewinnt.Render.Element Klassenreferenz<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -111,10 +111,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <tr class="memdesc:a13f9ca0302c6df0a9bfbc3aa803ff4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method should be implemented to draw the elements contenst.  <a href="#a13f9ca0302c6df0a9bfbc3aa803ff4eb">Mehr ...</a><br /></td></tr>
 <tr class="separator:a13f9ca0302c6df0a9bfbc3aa803ff4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Öffentliche Attribute</h2></td></tr>
-<tr class="memitem:a2accd6c5b300fac1256789ba7f5e1cb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html#a2accd6c5b300fac1256789ba7f5e1cb8">parent</a></td></tr>
-<tr class="separator:a2accd6c5b300fac1256789ba7f5e1cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Statische öffentliche Attribute</h2></td></tr>
+<tr class="memitem:addc04d4d1d8156112896eec43567fada"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html#addc04d4d1d8156112896eec43567fada">root</a></td></tr>
+<tr class="separator:addc04d4d1d8156112896eec43567fada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p>A base class to represent an element to render to the terminal. </p>
@@ -123,27 +123,34 @@ Klassendiagramm für VierGewinnt.Render.Element:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVierGewinnt_1_1Render_1_1Element__inherit__graph.png" border="0" usemap="#VierGewinnt_8Render_8Element_inherit__map" alt="Inheritance graph"/></div>
 <map name="VierGewinnt_8Render_8Element_inherit__map" id="VierGewinnt_8Render_8Element_inherit__map">
-<area shape="rect" id="node2" href="classVierGewinnt_1_1Render_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="268,145,483,281"/>
-<area shape="rect" id="node3" href="classVierGewinnt_1_1Render_1_1TextElement.html" title="Element to render a block of text. " alt="" coords="507,167,724,259"/>
-<area shape="rect" id="node4" href="classVierGewinnt_1_1Render_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="748,160,971,267"/>
-<area shape="rect" id="node14" href="classVierGewinnt_1_1Render_1_1WrapMultipleElement.html" title="Base class to wrap multiple elements in another element. " alt="" coords="1538,153,1757,274"/>
-<area shape="rect" id="node5" href="classVierGewinnt_1_1Render_1_1BackgroundColorElement.html" title="{VierGewinnt.Render.Background\lColorElement\n|&#45; color\l|+ BackgroundColorElement()\l+ draw()\l}" alt="" coords="5,337,217,443"/>
-<area shape="rect" id="node6" href="classVierGewinnt_1_1Render_1_1CenterElement.html" title="{VierGewinnt.Render.Center\lElement\n||+ CenterElement()\l+ draw()\l}" alt="" coords="241,337,424,443"/>
-<area shape="rect" id="node7" href="classVierGewinnt_1_1Render_1_1ColorElement.html" title="{VierGewinnt.Render.Color\lElement\n|&#45; color\l|+ ColorElement()\l+ draw()\l}" alt="" coords="448,337,623,443"/>
-<area shape="rect" id="node8" href="classVierGewinnt_1_1Render_1_1ConditionalWrapElement.html" title="An element to conditionally wrap a child element in a WrapElement. " alt="" coords="647,329,855,451"/>
-<area shape="rect" id="node9" href="classVierGewinnt_1_1Render_1_1FixedHeightElement.html" title="{VierGewinnt.Render.Fixed\lHeightElement\n|&#45; height\l|+ FixedHeightElement()\l+ draw()\l}" alt="" coords="880,337,1055,443"/>
-<area shape="rect" id="node10" href="classVierGewinnt_1_1Render_1_1UnderlineElement.html" title="{VierGewinnt.Render.Underline\lElement\n||+ UnderlineElement()\l+ draw()\l}" alt="" coords="1079,337,1277,443"/>
-<area shape="rect" id="node11" href="classVierGewinnt_1_1Render_1_1ViewElement.html" title="Base element for a view. " alt="" coords="1301,344,1521,436"/>
-<area shape="rect" id="node12" href="classVierGewinnt_1_1Views_1_1MainView.html" title="The games main view. " alt="" coords="1209,499,1403,708"/>
-<area shape="rect" id="node13" href="classVierGewinnt_1_1Views_1_1PlayerAddView.html" title="{VierGewinnt.Views.Player\lAddView\n|&#45; players\l&#45; names\l|+ PlayerAddView()\l+ focus()\l}" alt="" coords="1428,543,1603,664"/>
-<area shape="rect" id="node15" href="classVierGewinnt_1_1Render_1_1HorizontalSplitElement.html" title="{VierGewinnt.Render.Horizontal\lSplitElement\n||+ HorizontalSplitElement()\l+ draw()\l}" alt="" coords="1546,337,1749,443"/>
-<area shape="rect" id="node16" href="classVierGewinnt_1_1Render_1_1VerticalFloatElement.html" title="{VierGewinnt.Render.Vertical\lFloatElement\n||+ VerticalFloatElement()\l+ draw()\l}" alt="" coords="1773,337,1959,443"/>
+<area shape="rect" id="node2" href="classVierGewinnt_1_1Coin.html" title="Simple representation of a single coin/chip. " alt="" coords="539,167,663,274"/>
+<area shape="rect" id="node3" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1DynamicElement.html" title="An element to conditionally wrap a child element in a WrapElement. " alt="" coords="688,167,891,274"/>
+<area shape="rect" id="node4" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html" title="Base class to wrap an element in another element. " alt="" coords="915,160,1117,281"/>
+<area shape="rect" id="node16" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapMultipleElement.html" title="Base class to wrap multiple elements in another element. " alt="" coords="1255,167,1457,274"/>
+<area shape="rect" id="node19" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html" title="Element to render a grid of TerminalCharacters with borders. " alt="" coords="1481,145,1684,296"/>
+<area shape="rect" id="node21" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1TextElement.html" title="Element to render a block of text. " alt="" coords="1708,167,1911,274"/>
+<area shape="rect" id="node5" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1ConditionalWrapElement.html" title="An element to conditionally wrap a child element in a WrapElement. " alt="" coords="5,447,208,568"/>
+<area shape="rect" id="node6" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1CenterElement.html" title="Element which centers its child element horizontally and vertically. " alt="" coords="232,454,435,561"/>
+<area shape="rect" id="node7" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1FixedHeightElement.html" title="Element to limit the height of a child element. " alt="" coords="459,454,661,561"/>
+<area shape="rect" id="node8" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1BackgroundColorElement.html" title="An element to set a fixed background color on a child element. " alt="" coords="686,454,890,561"/>
+<area shape="rect" id="node9" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html" title="An element to set a fixed foreground color on a child element. " alt="" coords="915,454,1117,561"/>
+<area shape="rect" id="node14" href="classVierGewinnt_1_1Render_1_1Elements_1_1ViewElement.html" title="Base element for a view. " alt="" coords="1141,454,1344,561"/>
+<area shape="rect" id="node10" href="classVierGewinnt_1_1Player.html" title="Simple representation of a player. " alt="" coords="949,748,1083,884"/>
+<area shape="rect" id="node11" href="classVierGewinnt_1_1Players_1_1AIRandomPlayer.html" title="An AI player picking moves at random. " alt="" coords="677,961,883,1068"/>
+<area shape="rect" id="node12" href="classVierGewinnt_1_1Players_1_1AIStatisticalPlayer.html" title="Simple representation of a player. " alt="" coords="908,961,1124,1068"/>
+<area shape="rect" id="node13" href="classVierGewinnt_1_1Players_1_1HumanPlayer.html" title="Simple representation of a human player. " alt="" coords="1148,961,1335,1068"/>
+<area shape="rect" id="node15" href="classVierGewinnt_1_1Game.html" title="The games main view. " alt="" coords="1177,719,1309,913"/>
+<area shape="rect" id="node17" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1HorizontalSplitElement.html" title="Element which spaces out its children evenly. " alt="" coords="1368,454,1571,561"/>
+<area shape="rect" id="node18" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1VerticalFloatElement.html" title="Renders its childrens beneath each other, as tightly spaced as possible. " alt="" coords="1595,454,1797,561"/>
+<area shape="rect" id="node20" href="classVierGewinnt_1_1Board.html" title="Representation of the game board. " alt="" coords="1822,344,2021,671"/>
 </map>
 </div>
 <div class="dynheader">
 Zusammengehörigkeiten von VierGewinnt.Render.Element:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVierGewinnt_1_1Render_1_1Element__coll__graph.png" border="0" usemap="#VierGewinnt_8Render_8Element_coll__map" alt="Collaboration graph"/></div>
+<map name="VierGewinnt_8Render_8Element_coll__map" id="VierGewinnt_8Render_8Element_coll__map">
+</map>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
 <a class="anchor" id="a13f9ca0302c6df0a9bfbc3aa803ff4eb"></a>
@@ -171,7 +178,7 @@ Zusammengehörigkeiten von VierGewinnt.Render.Element:</div>
 <p>This method should be implemented to draw the elements contenst. </p>
 <p>The given buffer should be modified in whatever way the element sees fit. </p>
 
-<p>Implementiert in <a class="el" href="classVierGewinnt_1_1Render_1_1GridElement.html#aa82109ea8d65543af6a977ee737753e9">VierGewinnt.Render.GridElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1ConditionalWrapElement.html#abcaeee228a664b979cd33860d71c6e96">VierGewinnt.Render.ConditionalWrapElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1WrapElement.html#aa7405b9333ecea604f30297e2bab1dc6">VierGewinnt.Render.WrapElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1WrapMultipleElement.html#a739dfe0b103c8fbaf2c97622f25d64df">VierGewinnt.Render.WrapMultipleElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1TextElement.html#a0a08654c9cdad1202fd42774c16fcea3">VierGewinnt.Render.TextElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1BackgroundColorElement.html#a4bbfd7c03694fa6093de20b816465267">VierGewinnt.Render.BackgroundColorElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1ColorElement.html#aa1505dc3ad48981a4f46b4212ba2df85">VierGewinnt.Render.ColorElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1FixedHeightElement.html#a058762afdb8a47c4e434e0ddab28334f">VierGewinnt.Render.FixedHeightElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1VerticalFloatElement.html#a8bcdbbb1f91e8bebe7a3e42a27b42296">VierGewinnt.Render.VerticalFloatElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1CenterElement.html#addc061f55235c0cf48fdb218b7ed9f1f">VierGewinnt.Render.CenterElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1HorizontalSplitElement.html#a6b976c469fd1138cf510424aac6ba0f3">VierGewinnt.Render.HorizontalSplitElement</a> und <a class="el" href="classVierGewinnt_1_1Render_1_1UnderlineElement.html#a0b212bf44aad248903d4a5df4f2dceb3">VierGewinnt.Render.UnderlineElement</a>.</p>
+<p>Implementiert in <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1GridElement.html#a1b7ba7369526ee30ed426f6e467e9669">VierGewinnt.Render.Elements.Content.GridElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1ConditionalWrapElement.html#a497aec898f904cac2b0d20e70c1f3914">VierGewinnt.Render.Elements.Base.ConditionalWrapElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapElement.html#a28461c4fda219a62a52095e140cfb254">VierGewinnt.Render.Elements.Base.WrapElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1DynamicElement.html#ae5ad4b8f868ec1f21614f3854db4cfbe">VierGewinnt.Render.Elements.Base.DynamicElement&lt; T &gt;</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Content_1_1TextElement.html#a0dfcf4fe32a09fbc59d6c644b4d2223b">VierGewinnt.Render.Elements.Content.TextElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Base_1_1WrapMultipleElement.html#a22b059f4841f1ec98562867fc797f4ba">VierGewinnt.Render.Elements.Base.WrapMultipleElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1BackgroundColorElement.html#a9edbb1ed36f828392d96dfa8bd719910">VierGewinnt.Render.Elements.Style.BackgroundColorElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Style_1_1ColorElement.html#aa8c96f374edd19586d7639f511253410">VierGewinnt.Render.Elements.Style.ColorElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1FixedHeightElement.html#a4c3f83b5b09a707625cab4391df6a8b7">VierGewinnt.Render.Elements.Layout.FixedHeightElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1VerticalFloatElement.html#aa924915f88a7a532cd126756e02f2c21">VierGewinnt.Render.Elements.Layout.VerticalFloatElement</a>, <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1HorizontalSplitElement.html#a0d63df6b01a2876e98d572ee6a80a337">VierGewinnt.Render.Elements.Layout.HorizontalSplitElement</a> und <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1Layout_1_1CenterElement.html#a2ba48e0b262aaf4b074da773cb001ab8">VierGewinnt.Render.Elements.Layout.CenterElement</a>.</p>
 
 </div>
 </div>
@@ -199,19 +206,27 @@ Zusammengehörigkeiten von VierGewinnt.Render.Element:</div>
 <p>Simply chain upward by default. </p>
 <p>Allows us to only implement proper rendering on root element </p>
 
-<p>Erneute Implementation in <a class="el" href="classVierGewinnt_1_1Render_1_1ViewElement.html#a0c07db912bd7a1546a05dee17123fc5c">VierGewinnt.Render.ViewElement</a>.</p>
+<p>Erneute Implementation in <a class="el" href="classVierGewinnt_1_1Game.html#aaf23c407acd26da5e7176e56afe11a1e">VierGewinnt.Game</a> und <a class="el" href="classVierGewinnt_1_1Render_1_1Elements_1_1ViewElement.html#a21ac5e9197d27b0eb7894f86d370878e">VierGewinnt.Render.Elements.ViewElement</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Datenelemente</h2>
-<a class="anchor" id="a2accd6c5b300fac1256789ba7f5e1cb8"></a>
+<a class="anchor" id="addc04d4d1d8156112896eec43567fada"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a> VierGewinnt.Render.Element.parent</td>
+          <td class="memname"><a class="el" href="classVierGewinnt_1_1Render_1_1Element.html">Element</a> VierGewinnt.Render.Element.root</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
