@@ -27,7 +27,14 @@ namespace VierGewinnt {
 			/* Setup */
 			renderer.init();
 
-			List<Player> players = playerNames.Select(name => (Player) new HumanPlayer(name, Game.width)).ToList();
+			List<Player> players = playerNames.Select(name => {
+				if(name == "RandomAI") {
+					return (Player) new AIRandomPlayer(Game.width);
+				} else {
+					return (Player) new HumanPlayer(name, Game.width);
+				}
+			}).ToList();
+
 			game = new Game(renderer, players);
 
 			/* Have all rerenders trigger this */
