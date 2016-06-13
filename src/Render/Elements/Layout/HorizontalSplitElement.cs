@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using VierGewinnt.Render.Elements.Base;
 
 namespace VierGewinnt.Render.Elements.Layout {
-	/* Element which spaces out its childs evenly */
+	/** Element which spaces out its children evenly */
 	public class HorizontalSplitElement: WrapMultipleElement {
 		public HorizontalSplitElement(ICollection<Element> children): base(children) {}
 

@@ -1,7 +1,7 @@
 using System;
 
 namespace VierGewinnt.Players {
-	/** Simple representation of a player */
+	/** An AI player picking moves at random */
 	public class AIRandomPlayer: Player {
 		public AIRandomPlayer(int width): base("Random AI", width) {}
 

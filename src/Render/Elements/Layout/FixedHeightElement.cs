@@ -1,7 +1,7 @@
 using VierGewinnt.Render.Elements.Base;
 
 namespace VierGewinnt.Render.Elements.Layout {
-	/* Limited the height of an element */
+	/** Element to limit the height of a child element */
 	public class FixedHeightElement: WrapElement {
 		private int height;
 

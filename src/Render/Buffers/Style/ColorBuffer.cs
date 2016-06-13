@@ -2,6 +2,7 @@ using System;
 using VierGewinnt.Render.Buffers.Base;
 
 namespace VierGewinnt.Render.Buffers.Style {
+	/** Buffer which sets the foreground color of its childbuffer */
 	public class ColorBuffer: WrapBuffer {
 		private ConsoleColor color;
 

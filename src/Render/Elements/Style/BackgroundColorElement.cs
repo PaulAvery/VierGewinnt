@@ -3,6 +3,7 @@ using VierGewinnt.Render.Elements.Base;
 using VierGewinnt.Render.Buffers.Style;
 
 namespace VierGewinnt.Render.Elements.Style {
+	/** An element to set a fixed background color on a child element */
 	public class  BackgroundColorElement: WrapElement {
 		private ConsoleColor color;
 

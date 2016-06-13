@@ -2,7 +2,7 @@ using System;
 using VierGewinnt.Render.Elements.Content;
 
 namespace VierGewinnt.Players {
-	/** Simple representation of a player */
+	/** Simple representation of a human player */
 	public class HumanPlayer: Player {
 		public HumanPlayer(string name, int width): base(name, width) {}
 

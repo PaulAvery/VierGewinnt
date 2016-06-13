@@ -22,7 +22,7 @@ namespace VierGewinnt {
 		 */
 		public GridElement waitingGrid;
 
-		/** Widht of the waitingGrid */
+		/** Width of the waitingGrid */
 		protected int width;
 
 		public Player(string name, int width): base(colors.Pop(), new TextElement(name)) {
