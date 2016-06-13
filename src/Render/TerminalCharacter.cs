@@ -12,15 +12,9 @@ namespace VierGewinnt.Render {
 		public ConsoleColor ?foreground;
 		/** Background color */
 		public ConsoleColor ?background;
-		/**
-		 * Should this character be underlined?
-		 * Currently not used
-		 */
-		public bool underline;
 
-		public TerminalCharacter(char value, ConsoleColor ?foreground = null, ConsoleColor ?background = null, bool underline = false) {
+		public TerminalCharacter(char value, ConsoleColor ?foreground = null, ConsoleColor ?background = null) {
 			this.value = value;
-			this.underline = underline;
 			this.foreground = foreground;
 			this.background = background;
 		}
