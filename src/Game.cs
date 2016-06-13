@@ -18,26 +18,17 @@ namespace VierGewinnt {
 		/** The list of players */
 		public List<Player> players = new List<Player>();
 
+		public static readonly int width = 7;
+		public static readonly int height = 6;
+
 		/** The game board */
-		public Board board = new Board(7, 6);
+		public Board board = new Board(width, height);
 
 		/** Whos turn is it? */
 		public int turn = 0;
 
-		/** Position of the waiting coin */
-		public int waiting;
-
-		/**
-		 * The grid element for the waiting coin
-		 * We save it, because we have to modify in .draw()
-		 */
-		private GridElement waitingGrid;
-
 		public Game(Renderer renderer, List<Player> players): base(renderer) {
 			this.players = players;
-
-			/* Create main elements with correct sizes */
-			this.waitingGrid = new GridElement(this.board.width, 1);
 
 			/* Create element to display names */
 			Element names = new HorizontalSplitElement(
@@ -54,7 +45,7 @@ namespace VierGewinnt {
 
 			/* Center and align board and waiting row */
 			Element boardGrid = new CenterElement(new VerticalFloatElement(new Element[] {
-				this.waitingGrid,
+				new DynamicElement<GridElement>(() => currentPlayer().waitingGrid),
 				this.board
 			}));
 
@@ -82,19 +73,14 @@ namespace VierGewinnt {
 				}
 			}
 		}
+		
+		public override void render() {
+			base.render();
 
-		/** Override drawing function to set all neccessary data in elements */
-		public override void draw(Render.Buffer canvas) {
-			for(int x = 0; x < this.board.width; x++) {
-				/* Draw waiting coin */
-				if(this.waiting == x) {
-					waitingGrid.put(x, 0, new Coin(this.currentPlayer()));
-				} else {
-					waitingGrid.put(x, 0, new TextElement(" "));
-				}
-			}
-
-			base.draw(canvas);
+			/* Print frametimings for debug purposes */
+			Console.ResetColor();
+			Console.SetCursorPosition(0, 0);
+			Console.Write(renderer.lastFrameTime.ToString());
 		}
 
 		/**
@@ -102,68 +88,21 @@ namespace VierGewinnt {
 		 * Returns the games state once the game is done
 		 */
 		public Board.Status focus() {
+			/* Render the board */
+			this.render();
+
 			/* Main game loop */
 			while(true) {
-				/* Render the board */
-				render();
-
-				/* Print frametimings for debug purposes */
-				Console.ResetColor();
-				Console.SetCursorPosition(0, 0);
-				Console.Write(renderer.lastFrameTime.ToString());
-
 				/* Check if somebody won, or the game is over. If so, return */
 				if(this.board.status().done) {
 					break;
 				}
 
-				/* Wait for user input */
-				handleKey(Console.ReadKey().Key);
+				this.insert(currentPlayer().act(board.toArray()));
 			}
 
 			/* Return status so we can handle the winner in the Main() function */
 			return this.board.status();
-		}
-
-		/** Handle user input while game is running */
-		private void handleKey(ConsoleKey key) {
-			switch(key) {
-				case ConsoleKey.LeftArrow:
-					moveLeft();
-					break;
-				case ConsoleKey.RightArrow:
-					moveRight();
-					break;
-				case ConsoleKey.Enter:
-					insertCoin();
-					break;
-			}
-		}
-
-		/**********************************************************************
-		 * Key handlers
-		 **********************************************************************/
-		/** Select previous column */
-		private void moveLeft() {
-			if(this.waiting == 0) {
-				this.waiting = this.board.width - 1;
-			} else {
-				this.waiting--;
-			}
-		}
-
-		/** Select next column */
-		private void moveRight() {
-			if(this.waiting == this.board.width - 1) {
-				this.waiting = 0;
-			} else {
-				this.waiting++;
-			}
-		}
-
-		/** Insert coin into currently selected column */
-		private void insertCoin() {
-			this.insert(this.waiting);
 		}
 	}
 }

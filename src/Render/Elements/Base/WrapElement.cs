@@ -15,12 +15,7 @@ namespace VierGewinnt.Render.Elements.Base {
 		 * Properly assigns its parent
 		 */
 		public void setChild(Element child) {
-			if(this.child != null) {
-				this.child.parent = null;
-			}
-
 			this.child = child;
-			child.parent = this;
 		}
 
 		/** Call the childs draw() by default */

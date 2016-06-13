@@ -1,7 +1,9 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 using VierGewinnt.Render;
+using VierGewinnt.Players;
 
 namespace VierGewinnt {
 	/** The main application class */
@@ -24,7 +26,12 @@ namespace VierGewinnt {
 
 			/* Setup */
 			renderer.init();
-			game = new Game(renderer, playerNames.Select(name => new Player(name)).ToList());
+
+			List<Player> players = playerNames.Select(name => (Player) new HumanPlayer(name, Game.width)).ToList();
+			game = new Game(renderer, players);
+
+			/* Have all rerenders trigger this */
+			Element.root = game;
 
 			/* Pass focus to main view */
 			game.focus();

@@ -40,6 +40,11 @@ namespace VierGewinnt {
 			return this.state;
 		}
 
+		/** Return the coin array */
+		public Coin[,] toArray() {
+			return this.board;
+		}
+
 		/** Get coin from single position */
 		public Coin getPosition(int x, int y) {
 			return this.board[x, y];
@@ -59,6 +64,8 @@ namespace VierGewinnt {
 
 					/* Check if this resulted in a win for anyone */
 					this.state = this.checkStatus(Position, i);
+
+					this.render();
 					return true;
 				}
 			}
